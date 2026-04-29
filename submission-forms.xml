@@ -1487,7 +1487,7 @@
             </row>
         </form>
 
-        <!-- UFCAT: formulário de dissertação com unidade, curso e 3 membros de banca -->
+        <!-- UFCAT: formulário de dissertação com unidade, curso e até 5 membros de banca -->
         <form name="ufcatdissertation">
             <row>
                 <field>
@@ -1798,6 +1798,30 @@
                     <input-type>onebox</input-type>
                     <hint>Informe o nome completo do terceiro membro da banca.</hint>
                     <required>O membro da banca 3 é obrigatório.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee4</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Membro da banca 4</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do quarto membro da banca, se houver.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee5</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Membro da banca 5</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do quinto membro da banca, se houver.</hint>
+                    <required></required>
                 </field>
             </row>
         </form>
@@ -3208,6 +3232,30 @@
                     <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>Informe a URL Lattes do segundo membro da banca.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o membro da banca 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome do terceiro membro da banca, se houver.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL Lattes do terceiro membro da banca, se houver.</hint>
                     <required></required>
                 </field>
             </row>
