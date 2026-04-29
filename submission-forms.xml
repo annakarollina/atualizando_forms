@@ -1487,7 +1487,7 @@
             </row>
         </form>
 
-        <!-- UFCAT: formulário de dissertação com unidade, curso e 3 membros de banca -->
+        <!-- UFCAT: formulário de dissertação com unidade, curso e até 5 membros de banca -->
         <form name="ufcatdissertation">
             <row>
                 <field>
@@ -1798,6 +1798,30 @@
                     <input-type>onebox</input-type>
                     <hint>Informe o nome completo do terceiro membro da banca.</hint>
                     <required>O membro da banca 3 é obrigatório.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee4</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Membro da banca 4</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do quarto membro da banca, se houver.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee5</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Membro da banca 5</label>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do quinto membro da banca, se houver.</hint>
+                    <required></required>
                 </field>
             </row>
         </form>
@@ -2975,11 +2999,11 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>creator</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Informe o autor</label>
                     <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome completo do autor do TCC.</hint>
+                    <hint>Informe o nome completo do autor do TCC. Para mais de um autor, use Adicionar mais.</hint>
                     <required>O autor é obrigatório.</required>
                 </field>
                 <field>
@@ -3026,22 +3050,10 @@
                     <dc-qualifier>degree</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Selecione o grau acadêmico</label>
-                    <style>col-md-6</style>
+                    <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_tcc_degree_levels">dropdown</input-type>
                     <hint>Selecione o nível do curso: Bacharelado, Licenciatura ou Tecnológico.</hint>
                     <required>O grau acadêmico é obrigatório.</required>
-                </field>
-                <!-- Confirme no registry se dc.publisher.course está cadastrado -->
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>course</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Selecione o curso</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="ufcat_tcc_courses">dropdown</input-type>
-                    <hint>Valor fixo para esta coleção homologada.</hint>
-                    <required>O curso é obrigatório.</required>
                 </field>
             </row>
             <row>
@@ -3155,6 +3167,30 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
+                    <dc-qualifier>advisor-co1</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o coorientador</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do coorientador, se houver.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>advisor-co1Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do coorientador</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL Lattes do coorientador, se houver.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
                     <dc-qualifier>referee1</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Informe o membro da banca 1</label>
@@ -3202,6 +3238,30 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o membro da banca 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome do terceiro membro da banca, se houver.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a URL Lattes do terceiro membro da banca, se houver.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>resumo</dc-qualifier>
                     <repeatable>false</repeatable>
@@ -3231,8 +3291,8 @@
                     <repeatable>true</repeatable>
                     <label>Adicione as palavras-chave</label>
                     <style>col-md-6</style>
-                    <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave do trabalho.</hint>
+                    <input-type>onebox</input-type>
+                    <hint>Informe uma palavra-chave por campo, incluindo palavras-chave em outros idiomas quando houver.</hint>
                     <required></required>
                 </field>
                 <field>
@@ -3250,25 +3310,13 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>sponsorship</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Informe o fomento</label>
-                    <input-type>textarea</input-type>
-                    <hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-qualifier>uri</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Selecione a licença Creative Commons</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_cc_licenses">dropdown</input-type>
-                    <hint>Selecione a licença CC conforme indicado no TECA.</hint>
+                    <label>Selecione a licença Creative Commons (OpenAIRE)</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
+                    <hint>Selecione a URI da licença CC conforme indicada no TECA.</hint>
                     <required></required>
                 </field>
                 <field>
@@ -3277,20 +3325,9 @@
                     <dc-qualifier>access</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Selecione a permissão de acesso</label>
-                    <style>col-md-4</style>
+                    <style>col-md-6</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
                     <hint>Acesso aberto = texto completo disponível imediatamente. Acesso embargado = disponível após a data indicada. Acesso restrito = indisponível ao público por tempo indeterminado.</hint>
-                    <required></required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier>uri</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Informe a URI da licença</label>
-                    <style>col-md-4</style>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o link da licença, quando houver.</hint>
                     <required></required>
                 </field>
             </row>
@@ -3301,20 +3338,9 @@
                     <dc-qualifier>citation</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Informe a citação recomendada</label>
-                    <style>col-md-6</style>
+                    <style>col-md-12</style>
                     <input-type>onebox</input-type>
                     <hint>Informe a referência/citação recomendada para o TCC.</hint>
-                    <required></required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>uri</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Informe a URI do item</label>
-                    <style>col-md-6</style>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o URI persistente do item, quando disponível.</hint>
                     <required></required>
                 </field>
             </row>
