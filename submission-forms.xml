@@ -2992,20 +2992,9 @@
             </row>
         </form>
 
-        <!-- UFCAT: formulário de TCC (baseado no modelo institucional observado) -->
+        <!-- UFCAT: formulário de TCC - identificação do trabalho -->
         <form name="ufcattcc">
             <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>creator</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Informe o autor</label>
-                    <style>col-md-6</style>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o nome completo do autor do TCC. Para mais de um autor, use Adicionar mais.</hint>
-                    <required>O autor é obrigatório.</required>
-                </field>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
@@ -3016,6 +3005,17 @@
                     <input-type value-pairs-name="ufcat_tcc_types">dropdown</input-type>
                     <hint>Tipo fixo para este fluxo.</hint>
                     <required>O tipo é obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>degree</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Selecione o grau acadêmico</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_tcc_degree_levels">dropdown</input-type>
+                    <hint>Selecione o nível do curso: Bacharelado, Licenciatura ou Tecnológico.</hint>
+                    <required>O grau acadêmico é obrigatório.</required>
                 </field>
             </row>
             <row>
@@ -3040,20 +3040,6 @@
                     <input-type>onebox</input-type>
                     <hint>Informe subtítulo ou variação do título, quando houver.</hint>
                     <required></required>
-                </field>
-            </row>
-            <row>
-                <!-- UFCAT: nível acadêmico do TCC (dc.type.degree) -->
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier>degree</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Selecione o grau acadêmico</label>
-                    <style>col-md-12</style>
-                    <input-type value-pairs-name="ufcat_tcc_degree_levels">dropdown</input-type>
-                    <hint>Selecione o nível do curso: Bacharelado, Licenciatura ou Tecnológico.</hint>
-                    <required>O grau acadêmico é obrigatório.</required>
                 </field>
             </row>
             <row>
@@ -3137,6 +3123,23 @@
                     <input-type value-pairs-name="ufcat_tcc_iso_languages">dropdown</input-type>
                     <hint>Selecione o idioma principal do trabalho.</hint>
                     <required>O idioma é obrigatório.</required>
+                </field>
+            </row>
+        </form>
+
+        <!-- UFCAT: formulário de TCC - autoria, orientação e banca -->
+        <form name="ufcattccautoria">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>creator</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Informe o autor</label>
+                    <style>col-md-12</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe o nome completo do autor do TCC. Para mais de um autor, use Adicionar mais.</hint>
+                    <required>O autor é obrigatório.</required>
                 </field>
             </row>
             <row>
@@ -3259,6 +3262,10 @@
                     <required></required>
                 </field>
             </row>
+        </form>
+
+        <!-- UFCAT: formulário de TCC - resumo e assuntos -->
+        <form name="ufcattccdescricao">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -3307,6 +3314,10 @@
                     <required></required>
                 </field>
             </row>
+        </form>
+
+        <!-- UFCAT: formulário de TCC - direitos e citação -->
+        <form name="ufcattccdireitos">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
