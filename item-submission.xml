@@ -678,6 +678,7 @@
             <step id="collection"/>
             <step id="ufcattcc"/>
             <step id="upload"/>
+            <step id="cclicense"/>
             <step id="license"/>
         </submission-process>
 
