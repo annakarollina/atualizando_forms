@@ -1630,9 +1630,9 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo</label>
+                    <label>Resumo em língua estrangeira</label>
                     <input-type>textarea</input-type>
-                    <hint>Informe o abstract em outro idioma, quando aplicável.</hint>
+                    <hint>Informe o resumo em língua estrangeira, quando aplicável.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1801,7 +1801,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_educacao">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome completo do orientador.</hint><required>O orientador é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o abstract em outro idioma, quando aplicável.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>onebox</input-type><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
@@ -1815,7 +1815,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_engcivil">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome completo do orientador.</hint><required>O orientador é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o abstract em outro idioma, quando aplicável.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>onebox</input-type><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
@@ -1829,7 +1829,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_engprod">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome completo do orientador.</hint><required>O orientador é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o abstract em outro idioma, quando aplicável.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>onebox</input-type><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
@@ -1843,7 +1843,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_linguagem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome completo do orientador.</hint><required>O orientador é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o abstract em outro idioma, quando aplicável.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>onebox</input-type><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
@@ -1857,7 +1857,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_geografia">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome completo do orientador.</hint><required>O orientador é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o abstract em outro idioma, quando aplicável.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>onebox</input-type><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
@@ -2113,9 +2113,9 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Resumo</label>
+                    <label>Resumo em língua estrangeira</label>
                     <input-type>textarea</input-type>
-                    <hint>Informe o abstract em outro idioma, quando aplicável.</hint>
+                    <hint>Informe o resumo em língua estrangeira, quando aplicável.</hint>
                     <required></required>
                 </field>
             </row>
@@ -3251,10 +3251,10 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Informe o abstract</label>
+                    <label>Informe o resumo em língua estrangeira</label>
                     <input-type>textarea</input-type>
-                    <hint>Informe o abstract (em outro idioma, geralmente em inglês).</hint>
-                    <required>O abstract é obrigatório.</required>
+                    <hint>Informe o resumo em língua estrangeira, geralmente em inglês.</hint>
+                    <required>O resumo em língua estrangeira é obrigatório.</required>
                 </field>
             </row>
             <row>
