@@ -302,7 +302,22 @@
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattcc" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>TCC: Identificacao</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="ufcattccautoria" mandatory="true">
+            <heading>TCC: Autoria e banca</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="ufcattccdescricao" mandatory="true">
+            <heading>TCC: Descricao</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="ufcattccdireitos" mandatory="true">
+            <heading>TCC: Direitos</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -677,6 +692,9 @@
         <submission-process name="tccProcess">
             <step id="collection"/>
             <step id="ufcattcc"/>
+            <step id="ufcattccautoria"/>
+            <step id="ufcattccdescricao"/>
+            <step id="ufcattccdireitos"/>
             <step id="upload"/>
             <step id="cclicense"/>
             <step id="license"/>
