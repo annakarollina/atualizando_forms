@@ -302,7 +302,7 @@
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattcc" mandatory="true">
-            <heading>TCC: Identificacao</heading>
+            <heading>TCC: Identificação</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -312,7 +312,7 @@
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattccdescricao" mandatory="true">
-            <heading>TCC: Descricao</heading>
+            <heading>TCC: Descrição</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
