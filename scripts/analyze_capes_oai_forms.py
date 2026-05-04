@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """
-Analisa submission-forms.xml e item-submission.xml para comparar com CSV do guia OAI CAPES.
+Analisa submission-forms.xml e item-submission.xml para comparar com o CSV do guia CAPES.
+
+O ficheiro oficial no repositório é capes_oai_guide_reference.csv na raiz (separador ';'):
+  Nome do Metadado; Termo semântico; Exemplo de Metadados;
+
+A coluna "Exemplo de Metadados" pode listar vários campos DSpace (dc.* ou universidade.*).
 
 Uso:
   python3 scripts/analyze_capes_oai_forms.py [--guide PATH]
@@ -8,12 +13,14 @@ Uso:
 Saídas em docs/generated/:
   - forms_inventory.csv
   - submission_process_forms.csv
-  - coverage_matrix.csv (stub CSV vs processos chave)
+  - coverage_matrix.csv
+  - coverage_gaps_report.txt
 """
 from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -22,7 +29,8 @@ ROOT = Path(__file__).resolve().parents[1]
 FORMS_XML = ROOT / "submission-forms.xml"
 SUBMISSION_XML = ROOT / "item-submission.xml"
 OUT_DIR = ROOT / "docs" / "generated"
-DEFAULT_GUIDE = ROOT / "docs" / "capes_oai_guide_reference.csv"
+# CSV oficial na raiz do repositório (formato CAPES com ';')
+DEFAULT_GUIDE = ROOT / "capes_oai_guide_reference.csv"  # raiz do repo (formato CAPES com ';')
 
 
 def norm_qual(q: str | None) -> str:
@@ -30,7 +38,8 @@ def norm_qual(q: str | None) -> str:
 
 
 def triplet_key(schema: str, element: str, qualifier: str) -> str:
-    return f"{schema}.{element}.{norm_qual(qualifier) if norm_qual(qualifier) else '_'}"
+    q = norm_qual(qualifier)
+    return f"{schema}.{element}.{q if q else '_'}"
 
 
 def parse_submission_forms(path: Path) -> tuple[dict[str, set[str]], set[str]]:
@@ -104,35 +113,113 @@ def parse_submission_processes(path: Path, form_step_ids: set[str]) -> list[tupl
     return processes
 
 
-def load_guide_csv(path: Path) -> list[dict[str, str]]:
-    rows: list[dict[str, str]] = []
-    with path.open(newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+_DC_TOKEN = re.compile(r"\bdc\.([a-zA-Z0-9]+)(?:\.([a-zA-Z0-9\-]+))?\b")
+
+
+def parse_dc_triplets_from_exemplo(cell: str) -> list[str]:
+    """Extrai triplets dc.*.* da coluna 'Exemplo de Metadados' do guia CAPES."""
+    out: list[str] = []
+    seen: set[str] = set()
+    for m in _DC_TOKEN.finditer(cell or ""):
+        elem, qual = m.group(1), m.group(2) or ""
+        key = triplet_key("dc", elem, qual)
+        if key not in seen:
+            seen.add(key)
+            out.append(key)
+    return out
+
+
+def is_section_header_row(label: str, semantic: str, exemplo: str) -> bool:
+    t = (label + semantic + exemplo).lower()
+    if "nome do metadado" in label.lower() and "termo semântico" in semantic.lower():
+        return True
+    if "nota técnica" in t or "notas técnicas" in t:
+        return True
+    if "destaca-se" in t and "dcterms:abstract" in t:
+        return True
+    return False
+
+
+def load_capes_guide(path: Path) -> list[dict[str, str]]:
+    """
+    Lê o CSV CAPES (delimiter ';') ou o formato legado (delimiter ',' com dc_element).
+    Cada item devolvido tem: capes_label, semantic_term, exemplo_metadados, dc_triplets (lista em string '|').
+    """
+    raw = path.read_text(encoding="utf-8-sig")
+    dialect = csv.Sniffer().sniff(raw[:4096], delimiters=";,\t")
+    reader = csv.DictReader(raw.splitlines(), delimiter=dialect.delimiter)
+    fieldnames = reader.fieldnames or []
+    # Normalizar nomes de colunas
+    fn_lower = { (n or "").strip().lower(): n for n in fieldnames }
+
+    rows_out: list[dict[str, str]] = []
+
+    if "dc_element" in fn_lower:
+        # Formato legado compacto
         for row in reader:
-            rows.append({k: (v or "").strip() for k, v in row.items()})
-    return rows
+            r = {k: (v or "").strip() for k, v in row.items()}
+            el = r.get("dc_element", "")
+            qual = r.get("dc_qualifier", "")
+            keys = []
+            if el:
+                keys.append(triplet_key("dc", el, qual))
+            rows_out.append(
+                {
+                    "capes_label": r.get("capes_label", ""),
+                    "semantic_term": "",
+                    "exemplo_metadados": "",
+                    "obligation": r.get("obligation", ""),
+                    "notes": r.get("notes", ""),
+                    "dc_triplets": "|".join(keys),
+                }
+            )
+        return rows_out
+
+    # Formato oficial CAPES
+    key_label = fn_lower.get("nome do metadado") or fn_lower.get("nome_do_metadado")
+    key_sem = fn_lower.get("termo semântico") or fn_lower.get("termo semantico")
+    key_ex = fn_lower.get("exemplo de metadados") or fn_lower.get("exemplo_de_metadados")
+
+    if not key_label or not key_ex:
+        raise ValueError(
+            f"CSV do guia sem colunas esperadas. Encontrado: {fieldnames}. "
+            "Use ';' com Nome do Metadado; Termo semântico; Exemplo de Metadados;"
+        )
+
+    for row in reader:
+        r = {k: (v or "").strip() for k, v in row.items()}
+        label = r.get(key_label, "") if key_label else ""
+        semantic = r.get(key_sem, "") if key_sem else ""
+        exemplo = r.get(key_ex, "") if key_ex else ""
+
+        if not label and not exemplo:
+            continue
+        if is_section_header_row(label, semantic, exemplo):
+            continue
+        triplets = parse_dc_triplets_from_exemplo(exemplo)
+        rows_out.append(
+            {
+                "capes_label": label,
+                "semantic_term": semantic,
+                "exemplo_metadados": exemplo,
+                "obligation": "",
+                "notes": "",
+                "dc_triplets": "|".join(triplets),
+            }
+        )
+
+    return rows_out
 
 
-def dc_triplet_from_guide_row(row: dict[str, str]) -> str | None:
-    el = row.get("dc_element", "").strip()
-    if not el:
-        return None
-    qual = row.get("dc_qualifier", "").strip()
-    return triplet_key("dc", el, qual)
-
-
-# Campos do guia (chave dc.*) satisfeitos por mais de um triplet nos formulários ou no OAI.
+# Um triplet do guia pode ser coberto por variantes nos formulários.
 EQUIVALENT_FORM_TRIPLETS: dict[str, frozenset[str]] = {
-    # OAI-DC usa dc:creator; DSpace pode guardar dc.creator ou dc.contributor.author
-    "dc.contributor.author": frozenset(
-        {"dc.contributor.author", "dc.creator._"}
-    ),
-    # Idioma: qualificador iso vs campo language sem qualificador (valor ISO nas value-pairs)
+    "dc.contributor.author": frozenset({"dc.contributor.author", "dc.creator._"}),
     "dc.language.iso": frozenset({"dc.language.iso", "dc.language._"}),
-    # Resumo: guia pode pedir abstract; UFCAT usa resumo PT em description.resumo
     "dc.description.abstract": frozenset(
         {"dc.description.abstract", "dc.description.resumo"}
     ),
+    # Guia pode citar dc.relation.none; em DSpace costuma ser qualifier vazio
+    "dc.relation.none": frozenset({"dc.relation.none", "dc.relation._"}),
 }
 
 
@@ -145,14 +232,26 @@ def process_has_guide_field(triplets: set[str], guide_key: str) -> bool:
     return False
 
 
+def row_matches_guide_row(triplets: set[str], guide_keys: list[str]) -> bool:
+    """No guia CAPES, vários dc.* na mesma célula são alternativas (OR), não todos obrigatórios."""
+    if not guide_keys:
+        return False
+    return any(process_has_guide_field(triplets, k) for k in guide_keys)
+
+
 def obligation_is_mandatory(ob: str) -> bool:
     ob = (ob or "").upper().strip()
-    return ob.startswith("M") and "O" != ob  # M, MA count as needing coverage
+    return bool(ob) and ob.startswith("M") and ob != "O"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--guide", type=Path, default=DEFAULT_GUIDE, help="CSV do guia CAPES")
+    ap.add_argument(
+        "--guide",
+        type=Path,
+        default=DEFAULT_GUIDE,
+        help="CSV do guia (raiz: capes_oai_guide_reference.csv)",
+    )
     args = ap.parse_args()
 
     if not FORMS_XML.exists():
@@ -168,7 +267,6 @@ def main() -> int:
     form_step_ids = parse_form_steps(SUBMISSION_XML)
     processes = parse_submission_processes(SUBMISSION_XML, form_step_ids)
 
-    # Inventário por formulário
     inv_path = OUT_DIR / "forms_inventory.csv"
     with inv_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -181,7 +279,6 @@ def main() -> int:
                     qual = ""
                 w.writerow([form_name, schema, elem, qual, t])
 
-    # Processos -> formulários
     proc_path = OUT_DIR / "submission_process_forms.csv"
     with proc_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
@@ -189,10 +286,13 @@ def main() -> int:
         for pname, forms in processes:
             w.writerow([pname, " | ".join(forms)])
 
-    # Cobertura: guia DC vs união de triplets por processo
     guide_rows: list[dict[str, str]] = []
     if args.guide.exists():
-        guide_rows = load_guide_csv(args.guide)
+        try:
+            guide_rows = load_capes_guide(args.guide)
+        except ValueError as e:
+            print(e, file=sys.stderr)
+            return 1
     else:
         print(f"Guide CSV not found: {args.guide}", file=sys.stderr)
 
@@ -202,7 +302,6 @@ def main() -> int:
             acc |= form_triplets.get(fn, set())
         return acc
 
-    # Processos de interesse UFCAT + tradicional + openaire
     focus_prefixes = (
         "traditional",
         "dissertation",
@@ -219,16 +318,17 @@ def main() -> int:
     )
     selected = [(p, fs) for p, fs in processes if any(p.startswith(pr) for pr in focus_prefixes)]
 
+    proc_map = dict(processes)
+
     matrix_path = OUT_DIR / "coverage_matrix.csv"
     with matrix_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(
             [
-                "dc_element",
-                "dc_qualifier",
-                "obligation_guide",
                 "capes_label",
-                "triplet_key",
+                "semantic_term",
+                "dc_triplets_from_guide",
+                "obligation_guide",
                 "covered_traditional",
                 "covered_dissertationProcess",
                 "covered_thesisProcess",
@@ -236,28 +336,23 @@ def main() -> int:
                 "covered_openairePublicationSubmission",
             ]
         )
-        # Resolver processos por nome
-        proc_map = dict(processes)
         for row in guide_rows:
-            tkey = dc_triplet_from_guide_row(row)
-            if not tkey:
+            keys_str = row.get("dc_triplets", "")
+            gkeys = [k for k in keys_str.split("|") if k]
+            if not gkeys:
                 continue
             obl = row.get("obligation", "")
-            label = row.get("capes_label", "")
-            el = row.get("dc_element", "")
-            qual = row.get("dc_qualifier", "")
 
             def cov(name: str) -> str:
                 triplets = triplets_for_process(proc_map.get(name, []))
-                return "yes" if process_has_guide_field(triplets, tkey) else "no"
+                return "yes" if row_matches_guide_row(triplets, gkeys) else "no"
 
             w.writerow(
                 [
-                    el,
-                    qual,
+                    row.get("capes_label", ""),
+                    row.get("semantic_term", ""),
+                    keys_str,
                     obl,
-                    label,
-                    tkey,
                     cov("traditional"),
                     cov("dissertationProcess"),
                     cov("thesisProcess"),
@@ -266,31 +361,39 @@ def main() -> int:
                 ]
             )
 
-    # Relatório texto: lacunas M para processos selecionados
     report_path = OUT_DIR / "coverage_gaps_report.txt"
     with report_path.open("w", encoding="utf-8") as f:
-        f.write("Relatório gerado por analyze_capes_oai_forms.py\n\n")
+        f.write("Relatório gerado por analyze_capes_oai_forms.py\n")
+        f.write(f"Guia: {args.guide}\n\n")
         if not args.guide.exists():
-            f.write("AVISO: CSV do guia não encontrado; matriz pode estar vazia.\n\n")
-        f.write("Campos do guia (dc.*) ausentes por processo (apenas obligation M ou MA):\n\n")
-        for row in guide_rows:
-            obl = row.get("obligation", "")
-            if not obligation_is_mandatory(obl):
-                continue
-            tkey = dc_triplet_from_guide_row(row)
-            if not tkey:
-                continue
-            missing = [
-                p
-                for p, fs in selected
-                if not process_has_guide_field(triplets_for_process(fs), tkey)
-            ]
-            if missing:
-                f.write(
-                    f"- {tkey} ({row.get('capes_label','')}) obr={obl} ausente em: {', '.join(missing)}\n"
-                )
+            f.write("AVISO: CSV do guia não encontrado.\n\n")
 
-        f.write("\n\nTriplets não-DC nos formulários (amostra; podem mapear OAI via crosswalk):\n")
+        f.write(
+            "Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet "
+            "está presente no formulário do processo:\n\n"
+        )
+        for row in guide_rows:
+            keys_str = row.get("dc_triplets", "")
+            gkeys = [k for k in keys_str.split("|") if k]
+            if not gkeys:
+                continue
+            missing_detail: list[str] = []
+            for pname, fs in selected:
+                tset = triplets_for_process(fs)
+                if not row_matches_guide_row(tset, gkeys):
+                    missing_detail.append(
+                        f"{pname}: nenhum de {', '.join(gkeys)}"
+                    )
+            if missing_detail:
+                f.write(f"- {row.get('capes_label', '')[:120]}\n")
+                f.write(f"  Triplets guia: {keys_str}\n")
+                for line in missing_detail[:25]:
+                    f.write(f"  · {line}\n")
+                if len(missing_detail) > 25:
+                    f.write(f"  · ... e mais {len(missing_detail) - 25} processos\n")
+                f.write("\n")
+
+        f.write("\nTriplets não-DC nos formulários (amostra):\n")
         non_dc = sorted({t for fts in form_triplets.values() for t in fts if not t.startswith("dc.")})
         for t in non_dc[:80]:
             f.write(f"  {t}\n")
