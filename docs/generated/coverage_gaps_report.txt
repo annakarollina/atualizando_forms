@@ -1,0 +1,53 @@
+Relatório gerado por analyze_capes_oai_forms.py
+
+Campos do guia (dc.*) ausentes por processo (apenas obligation M ou MA):
+
+- dc.title._ (OAI-DC title) obr=M ausente em: openaireOrganizationSubmission
+- dc.contributor.author (Autor) obr=M|MA ausente em: openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+- dc.date.issued (Data) obr=M|MA ausente em: openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+- dc.publisher._ (Editora ou instituição) obr=MA ausente em: ordinanceProcess, resolutionProcess, policyProcess, administrativeOtherProcess, openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+- dc.type._ (Tipo) obr=MA ausente em: openairePersonSubmission, openaireProjectSubmission
+- dc.language.iso (Idioma) obr=MA ausente em: ordinanceProcess, resolutionProcess, policyProcess, administrativeOtherProcess, openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+- dc.identifier._ (Identificador) obr=M|MA ausente em: dissertationProcess, thesisProcess, dissProcess_educacao, dissProcess_engcivil, dissProcess_engprod, dissProcess_linguagem, dissProcess_geografia, dissProcess_gestao, dissProcess_historia, dissProcess_modelagem, dissProcess_quimica, dissProcess_fisica, dissProcess_matematica, dissProcess_saude, dissProcess_profbio, dissProcess_ppgcem, thesisProcess_linguagem, thesisProcess_quimica, thesisProcess_cet, thesisProcess_ppgcem, ordinanceProcess, resolutionProcess, policyProcess, administrativeOtherProcess, tccProcess, Dataset, openairePersonSubmission, openaireOrganizationSubmission
+- dc.description.abstract (Resumo) obr=MA ausente em: ordinanceProcess, resolutionProcess, policyProcess, administrativeOtherProcess, openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+- dc.rights._ (Direitos) obr=MA ausente em: traditional, ordinanceProcess, resolutionProcess, policyProcess, administrativeOtherProcess, tccProcess, traditional-edit, Publication, Dataset, openairePublicationSubmission, openairePersonSubmission, openaireProjectSubmission, openaireOrganizationSubmission
+
+
+Triplets não-DC nos formulários (amostra; podem mapear OAI via crosswalk):
+  creativework.datePublished._
+  creativework.editor._
+  creativework.keywords._
+  creativework.publisher._
+  creativeworkseries.issn._
+  dcterms.references._
+  dspace.object.owner
+  oaire.citation.conferenceDate
+  oaire.citation.conferencePlace
+  oaire.citation.edition
+  oaire.citation.endPage
+  oaire.citation.issue
+  oaire.citation.startPage
+  oaire.citation.title
+  oaire.citation.volume
+  oaire.fundingStream._
+  oaire.version._
+  organization.address.addressCountry
+  organization.address.addressLocality
+  organization.foundingDate._
+  organization.identifier._
+  organization.legalName._
+  person.affiliation.name
+  person.birthDate._
+  person.email._
+  person.familyName._
+  person.givenName._
+  person.identifier._
+  person.jobTitle._
+  project.amount._
+  project.amount.currency
+  project.endDate._
+  project.funder.name
+  project.investigator._
+  project.startDate._
+  publicationissue.issueNumber._
+  publicationvolume.volumeNumber._

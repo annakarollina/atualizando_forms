@@ -1,0 +1,8 @@
+O ficheiro capes_oai_guide_reference.csv neste diretório é um stub genérico com elementos Dublin Core usados em perfis OAI-DC/OpenAIRE típicos.
+
+Para corresponder exatamente ao Guia_Configuracao_OAI_CAPES_v1.1.xlsx oficial da CAPES:
+1. Exporte a aba relevante do Excel para CSV (UTF-8).
+2. Substitua capes_oai_guide_reference.csv mantendo as colunas: dc_element, dc_qualifier, obligation, notes, capes_label.
+3. Execute: python3 scripts/analyze_capes_oai_forms.py
+
+Os relatórios em docs/generated/ serão regenerados.

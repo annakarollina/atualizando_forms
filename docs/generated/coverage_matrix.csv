@@ -1,0 +1,18 @@
+dc_element,dc_qualifier,obligation_guide,capes_label,triplet_key,covered_traditional,covered_dissertationProcess,covered_thesisProcess,covered_tccProcess,covered_openairePublicationSubmission
+title,,M,OAI-DC title,dc.title._,yes,yes,yes,yes,yes
+contributor,author,M|MA,Autor,dc.contributor.author,yes,yes,yes,yes,yes
+date,issued,M|MA,Data,dc.date.issued,yes,yes,yes,yes,yes
+publisher,,MA,Editora ou instituição,dc.publisher._,yes,yes,yes,yes,yes
+type,,MA,Tipo,dc.type._,yes,yes,yes,yes,yes
+language,iso,MA,Idioma,dc.language.iso,yes,yes,yes,yes,yes
+identifier,,M|MA,Identificador,dc.identifier._,yes,no,no,no,yes
+subject,,O,Assunto,dc.subject._,yes,yes,yes,yes,yes
+description,abstract,MA,Resumo,dc.description.abstract,yes,yes,yes,yes,yes
+rights,,MA,Direitos,dc.rights._,no,yes,yes,no,no
+rights,uri,O,Licença CC URI,dc.rights.uri,no,no,no,yes,yes
+rights,access,O,Acesso,dc.rights.access,no,no,no,yes,no
+relation,,O,Relação,dc.relation._,no,no,no,no,yes
+description,sponsorship,O,Patrocínio,dc.description.sponsorship,yes,yes,yes,no,no
+coverage,,O,Cobertura,dc.coverage._,no,no,no,no,yes
+format,,O,Formato,dc.format._,no,no,no,no,no
+source,,O,Fonte,dc.source._,no,no,no,no,no
