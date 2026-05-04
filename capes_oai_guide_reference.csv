@@ -1,0 +1,49 @@
+Nome do Metadado;Termo semântico;Exemplo de Metadados;
+Tipo de documento da produção intelectual;dcterms:type;dc.type;
+Tipo de produção intelectual;capes:outputType;universidade.tipoProducao;
+Autor da produção intelectual;dcterms:creator;dc.creator;
+Identificador Lattes da pessoa da produção intelectual;capes:lattesId;"dc.creator.Lattes dc.contributor.advisor1Lattes dc.contributor.advisor-co1Latte s
+dc.contributor.referee1Lattes dc.contributor.referee2Lattes dc.contributor.referee3Lattes dc.contributor.advisor4Lattes dc.contributor.advisor5Lattes";
+Nome do Metadado;Termo semântico;Exemplo de Metadados;
+Identificador ORCiD da pessoa da produção intelectual;vivo:orcidId;dc.creator.ID dc.contributor.advisor1ID dc.contributor.advisor-co1ID dc.contributor.referee1ID dc.contributor.referee2ID dc.contributor.referee3ID dc.contributor.advisor4ID dc.contributor.advisor5ID;
+Identificador ResearcherID da pessoa da produção intelectual;vivo:researcherId;dc.contributor.researcherID dc.creator.researcherID;
+Identificador Scopus Author ID da pessoa da produção intelectual;vivo:scopusId;dc.contributor.scopusID dc.creator.scopusID;
+Título da produção intelectual;dcterms:title;dc.title;
+Título alternativo da produção intelectual;dcterms:alternative;dc.title.alternative;
+Resumo da produção intelectual no idioma principal;dcterms:abstract;dc.description.resumo;
+Resumo da produção intelectual em outro idioma;dcterms:abstract;dc.description.abstract;
+Palavra-chave da produção intelectual no idioma principal;dcterms:subject;dc.subject dc.subject.pt;
+Palavra-chave em outro idioma;dcterms:subject;dc.subject.gr dc.subject.en;
+Idioma principal da produção intelectual;dcterms:language;dc.language;
+Nome do Metadado;Termo semântico;Exemplo de Metadados;
+URI do identificador único da produção intelectual;capes:outputUri;dc.identifier.uri;
+Agência de fomento da produção intelectual;schema:sponsor;universidade.financiador;
+Permissão de acesso à produção intelectual;dcterms:rights;dc.rights;
+URI de acesso à licença de direitos autorais da produção intelectual;dcterms:license;dc.rights.uri;
+"Nome do Programa de Pós-Graduação ao qual a
+produção intelectual possui vínculo";capes:hasProgram;dc.publisher.program;
+Código do Programa de Pós-Graduação ao qual a produção intelectual possui vínculo;capes:programCode;universidade.programa.codigo;
+Data de liberação para acesso ao texto completo da produção intelectual;dcterms:available;dc.date.available;
+Produção intelectual relacionada;dcterms:relation;dc.relation.none;
+Nome do Orientador;capes:advisor;dc.contributor.advisor1;
+Nome do Coorientador;capes:coAdvisor;dc.contributor.advisor-co1;
+Nome do membro da banca;capes:committeeMemb er;dc.contributor.referee1 dc.contributor.referee2 dc.contributor.referee3 dc.contributor.referee4 dc.contributor.referee5;
+Número total de páginas da produção intelectual;bibo:numPages;universidade.numeroPaginas;
+Nome do Metadado;Termo semântico;Exemplo de Metadados;
+Projeto de pesquisa vinculado à produção intelectual;capes:hasResearchProj ect;universidade.projetoPesquisa;
+Nome da linha de pesquisa da produção intelectual;capes:hasResearchLine;universidade.LinhaPesquisa;
+Nome da área de concentração da produção intelectual;capes:hasConcentration Area;universidade.areaConcentraca o;
+Data da defesa do trabalho final;capes:defenseDate;dc.date.issued;
+"Destaca-se  que  os  campos  <dcterms:abstract> e  <dcterms:subject> são os únicos campos que apresentam um campo de idioma (language). Esse é um  ponto  essencial  para  que  os  dados  sejam  tratados  corretamente  para  o
+processo da coleta.";;;
+;;;
+"7.2 Notas técnicas sobre o mapeamento
+A seguir, apresentam-se algumas notas técnicas para o processo de elaboração do crosswalk.
+Nota técnica 1: cada campo do padrão OAI_CAPES deve ser associado a um metadado  efetivamente  existente  no  repositório.  Caso  o  metadado  de origem não  esteja preenchido no item, o elemento correspondente poderá ser gerado vazio ou sem conteúdo útil, conforme a implementação adotada no XSL.
+Nota técnica 2: os caminhos XPath/XSL devem corresponder rigorosamente à estrutura   hierárquica   interna   do   DSpace/XOAI.   Qualquer   divergência   na identificação  dos  elementos,  dos qualificadores ou no nome do campo value impedirá a extração correta do metadado.
+Nota  técnica  3:  a  nomenclatura  utilizada  no  comentário  de  cada  bloco  XSL deve indicar, de forma padronizada, o campo de destino no padrão OAI_CAPES e  o  respectivo  metadado  de  origem  no  repositório.  Recomenda-se  adotar  o seguinte modelo:
+<!-- [vocabulário:campo]; metadado de origem no repositório: dc.[elemento].[qualificador] →
+Nota  técnica  4:  quando  o  metadado  de  origem  não  possuir  qualificador,  o caminho  XPath/XSL  deve  conter  apenas  o  elemento  principal,  sem  níveis intermediários adicionais.
+Nota  técnica  5:  o  mapeamento  deve  ser  validado  com  registros  reais  do repositório, a fim de confirmar que os campos expostos pelo provedor OAI-PMH estão sendo preenchidos conforme o padrão esperado pela CAPES.
+Nota técnica 6: sempre que houver alteração na estrutura de armazenamento do  repositório  digital,  que  impacte  nos  termos  semânticos,  a compatibilização";;;
+;;;
