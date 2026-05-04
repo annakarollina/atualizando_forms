@@ -1276,6 +1276,19 @@
                     <required></required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Selecione a licença Creative Commons (OpenAIRE)</label>
+                    <style>col-md-12</style>
+                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
+                    <hint>Selecione a URI da licença CC conforme as diretrizes OpenAIRE.</hint>
+                    <required></required>
+                </field>
+            </row>
         </form>
 
         <form name="openairePersonForm">
