@@ -1,0 +1,24 @@
+capes_label,semantic_term,dc_triplets_from_guide,obligation_guide,covered_traditional,covered_dissertationProcess,covered_thesisProcess,covered_tccProcess,covered_openairePublicationSubmission
+Tipo de documento da produção intelectual,dcterms:type,dc.type._,,yes,yes,yes,yes,yes
+Autor da produção intelectual,dcterms:creator,dc.creator._,,no,yes,yes,yes,no
+Identificador Lattes da pessoa da produção intelectual,capes:lattesId,dc.creator.Lattes|dc.contributor.advisor1Lattes|dc.contributor.advisor-co1Lattes|dc.contributor.referee1Lattes|dc.contributor.referee2Lattes|dc.contributor.referee3Lattes|dc.contributor.referee4Lattes|dc.contributor.referee5Lattes,,no,yes,yes,yes,no
+Identificador ORCiD da pessoa da produção intelectual,vivo:orcidId,dc.creator.ID|dc.contributor.advisor1ID|dc.contributor.advisor-co1ID|dc.contributor.referee1ID|dc.contributor.referee2ID|dc.contributor.referee3ID|dc.contributor.referee4ID|dc.contributor.referee5ID,,no,no,no,no,no
+Identificador ResearcherID da pessoa da produção intelectual,vivo:researcherId,dc.contributor.researcherID|dc.creator.researcherID,,no,no,no,no,no
+Identificador Scopus Author ID da pessoa da produção intelectual,vivo:scopusId,dc.contributor.scopusID|dc.creator.scopusID,,no,no,no,no,no
+Título da produção intelectual,dcterms:title,dc.title._,,yes,yes,yes,yes,yes
+Título alternativo da produção intelectual,dcterms:alternative,dc.title.alternative,,yes,yes,yes,yes,yes
+Resumo da produção intelectual no idioma principal,dcterms:abstract,dc.description.resumo,,no,yes,yes,yes,no
+Resumo da produção intelectual em outro idioma,dcterms:abstract,dc.description.abstract,,yes,yes,yes,yes,yes
+Palavra-chave da produção intelectual no idioma principal,dcterms:subject,dc.subject._|dc.subject.pt,,yes,yes,yes,yes,yes
+Palavra-chave em outro idioma,dcterms:subject,dc.subject.gr|dc.subject.en,,no,no,no,no,no
+Idioma principal da produção intelectual,dcterms:language,dc.language._,,no,yes,yes,yes,no
+URI do identificador único da produção intelectual,capes:outputUri,dc.identifier.uri,,no,no,no,no,no
+Permissão de acesso à produção intelectual,dcterms:rights,dc.rights._,,no,yes,yes,no,no
+URI de acesso à licença de direitos autorais da produção intelectual,dcterms:license,dc.rights.uri,,no,no,no,yes,yes
+Nome do Programa de Pós-Graduação ao qual a produção intelectual possui vínculo,capes:hasProgram,dc.publisher.program,,no,yes,yes,no,no
+Data de liberação para acesso ao texto completo da produção intelectual,dcterms:available,dc.date.available,,no,yes,yes,yes,no
+Produção intelectual relacionada,dcterms:relation,dc.relation.none,,no,no,no,no,yes
+Nome do Orientador,capes:advisor,dc.contributor.advisor1,,no,yes,yes,yes,no
+Nome do Coorientador,capes:coAdvisor,dc.contributor.advisor-co1,,no,yes,yes,yes,no
+Nome do membro da banca,capes:committeeMember,dc.contributor.referee1|dc.contributor.referee2|dc.contributor.referee3|dc.contributor.referee4|dc.contributor.referee5,,no,yes,yes,yes,no
+Data da defesa do trabalho final,capes:defenseDate,dc.date.issued,,yes,yes,yes,yes,yes

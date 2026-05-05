@@ -1,0 +1,15 @@
+O ficheiro canónico do guia CAPES neste repositório é:
+
+  capes_oai_guide_reference.csv   (na raiz do projeto)
+
+Formato: separador ponto-e-vírgula (;), colunas:
+  Nome do Metadado; Termo semântico; Exemplo de Metadados;
+
+A coluna "Exemplo de Metadados" lista campos DSpace (dc.element.qualifier ou universidade.*).
+Quando há vários tokens dc.* na mesma célula, o script trata como alternativas (OR).
+
+Para regenerar os relatórios em docs/generated/:
+
+  python3 scripts/analyze_capes_oai_forms.py
+  # ou:
+  python3 scripts/analyze_capes_oai_forms.py --guide capes_oai_guide_reference.csv

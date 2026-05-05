@@ -1,0 +1,6 @@
+Checklist: validar saída OAI-PMH no servidor DSpace (não incluído neste repositório de configuração)
+
+1) Confirmar ficheiros em dspace/config/ na instalação: crosswalks (Dublin Core → oai_dc), oai.cfg (prefixos habilitados).
+2) Para um item de cada fluxo (dissertação, tese, TCC, administrativo), solicitar GetRecord com metadataPrefix=oai_dc e metadataPrefix=oai_openaire (se aplicável).
+3) Verificar se dc.identifier com URI handle aparece mesmo quando o formulário não tem campo identifier (DSpace atribui handle na publicação).
+4) Comparar elementos exportados com o CSV oficial exportado do Guia_Configuracao_OAI_CAPES_v1.1.xlsx.
