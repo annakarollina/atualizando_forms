@@ -93,7 +93,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Data da publicação ou defesa</label>
+                    <label>Data de defesa</label>
                     <style>col-md-4</style>
                     <input-type>date</input-type>
                     <hint>Informe a data da publicação ou da defesa/distribuição pública. Omita dia ou mês quando não se aplicarem.</hint>
@@ -212,8 +212,8 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Fomento / patrocínio</label>
-                    <input-type>textarea</input-type>
+                    <label>Fomento</label>
+                    <input-type>onebox</input-type>
                     <hint>Informe agências de fomento, bolsas ou códigos de financiamento.</hint>
                     <required></required>
                 </field>
@@ -243,7 +243,7 @@
                     <relationship-type>isAuthorOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Autor</label>
+                    <label>Autor(es)</label>
                     <hint>Informe o nome do autor (sobrenome, prenomes).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
@@ -259,11 +259,6 @@
                     <!--<regex>\w+(,)+\w+</regex>-->
                 </relation-field>
             </row>
-            <!--
-                Uncomment the following definition to enable entry of
-                editors on the publication submission form
-            -->
-            <!--
             <row>
                 <relation-field>
                     <relationship-type>isEditorOfPublication</relationship-type>
@@ -281,7 +276,6 @@
                     <required></required>
                 </relation-field>
               </row>
-              -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1791,7 +1785,7 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Fomento</label>
-                    <input-type>textarea</input-type>
+                    <input-type>onebox</input-type>
                     <hint>Informe agência de fomento, bolsa ou apoio, se houver.</hint>
                     <required></required>
                 </field>
@@ -1802,7 +1796,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Data da defesa</label>
+                    <label>Data de defesa</label>
                     <style>col-md-6</style>
                     <input-type>date</input-type>
                     <hint>Informe a data de defesa da dissertação.</hint>
@@ -1846,7 +1840,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>onebox</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>O tipo do trabalho é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>O idioma é obrigatório.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Informe a licença ou declaração de direitos aplicável.</hint><required></required></field></row>
@@ -1861,7 +1855,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>onebox</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
@@ -1876,7 +1870,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>onebox</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
@@ -1891,7 +1885,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>onebox</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
@@ -1906,7 +1900,7 @@
             <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>textarea</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
+            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>onebox</input-type><hint>Informe agência de fomento, bolsa ou apoio financeiro, se houver.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
             <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
@@ -2317,7 +2311,7 @@
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Fomento</label>
-                    <input-type>textarea</input-type>
+                    <input-type>onebox</input-type>
                     <hint>Informe agência de fomento, bolsa ou apoio, se houver.</hint>
                     <required></required>
                 </field>
@@ -2328,7 +2322,7 @@
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Data da defesa</label>
+                    <label>Data de defesa</label>
                     <style>col-md-6</style>
                     <input-type>date</input-type>
                     <hint>Informe a data de defesa da tese.</hint>
@@ -4049,13 +4043,11 @@
             </pair>
         </value-pairs>
 
-        <!-- default language order: (from dspace 1.2.1)
-             "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
-          -->
+        <!-- UFCAT: ordem — Português, inglês (en_US, en), demais; stored-values padrão DSpace -->
         <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
             <pair>
-                <displayed-value>N/A</displayed-value>
-                <stored-value></stored-value>
+                <displayed-value>Português</displayed-value>
+                <stored-value>por</stored-value>
             </pair>
             <pair>
                 <displayed-value>English (United States)</displayed-value>
@@ -4065,7 +4057,7 @@
                 <displayed-value>English</displayed-value>
                 <stored-value>en</stored-value>
             </pair>
-            <pair>
+
                 <displayed-value>Spanish</displayed-value>
                 <stored-value>es</stored-value>
             </pair>
@@ -4090,10 +4082,6 @@
                 <stored-value>zh</stored-value>
             </pair>
             <pair>
-                <displayed-value>Portuguese</displayed-value>
-                <stored-value>por</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>Turkish</displayed-value>
                 <stored-value>tr</stored-value>
             </pair>
@@ -4101,6 +4089,11 @@
                 <displayed-value>(Other)</displayed-value>
                 <stored-value>other</stored-value>
             </pair>
+            <pair>
+                <displayed-value>N/A</displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
         </value-pairs>
 
         <!-- Openaire specific value pairs -->
