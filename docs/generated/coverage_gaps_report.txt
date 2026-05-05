@@ -1,5 +1,5 @@
 Relatório gerado por analyze_capes_oai_forms.py
-Guia: /workspace/capes_oai_guide_reference.csv
+Guia: C:\annakarollina\atualizando_forms\capes_oai_guide_reference.csv
 
 Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presente no formulário do processo:
 
