@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node id="fomento" label="Agências de Fomento (Brasil)">
+  <isComposedBy>
+    <node id="FAPEG" label="Fundação de Apoio a Pesquisa do Estado de Goiás (FAPEG)">
+      <isComposedBy>
+        <node id="https://ror.org/00w8cq239"/>
+      </isComposedBy>
+    </node>
+    <node id="FUNAPE" label="Fundação de Apoio à Pesquisa (FUNAPE)">
+      <isComposedBy>
+        <node id="https://doi.org/10.13039/501100009945"/>
+      </isComposedBy>
+    </node>
+    <node id="FINEP" label="Financiadora de Estudos e Projetos (FINEP)">
+      <isComposedBy>
+        <node id="https://ror.org/030w99567"/>
+      </isComposedBy>
+    </node>
+    <node id="CNPq" label="Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)">
+      <isComposedBy>
+        <node id="https://ror.org/03swz6y49"/>
+      </isComposedBy>
+    </node>
+    <node id="CAPES" label="Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)">
+      <isComposedBy>
+        <node id="https://ror.org/00x0ma614"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPESP" label="Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP)">
+      <isComposedBy>
+        <node id="https://ror.org/02ddkpn78"/>
+      </isComposedBy>
+    </node>
+    <node id="FGB" label="Fundação Grupo Boticário (FGB)">
+      <isComposedBy>
+        <node id="https://ror.org/02j4h8a39"/>
+      </isComposedBy>
+    </node>
+    <node id="ABES" label="AES Brasil Energia S.A. (ABES)">
+      <isComposedBy>
+        <node id="https://ror.org/05pae1j85"/>
+      </isComposedBy>
+    </node>
+    <node id="AEB" label="Agência Espacial Brasileira (AEB)">
+      <isComposedBy>
+        <node id="https://ror.org/02ddzfk73"/>
+      </isComposedBy>
+    </node>
+    <node id="FA" label="Fundação Agrisus (FA)">
+      <isComposedBy>
+        <node id="https://ror.org/05akyca73"/>
+      </isComposedBy>
+    </node>
+    <node id="FAAEP" label="Fundação Amazônia de Amparo a Estudos e Pesquisas (FAAEP)">
+      <isComposedBy>
+        <node id="https://ror.org/00ssgrj25"/>
+      </isComposedBy>
+    </node>
+    <node id="ABMMM" label="Associação Brasileira de Metalurgia, Materiais e Mineração (ABMMM)">
+      <isComposedBy>
+        <node id="https://ror.org/024jp7r97"/>
+      </isComposedBy>
+    </node>
+    <node id="ABSC" label="Associação Brasileira de Saúde Coletiva (ABSC)">
+      <isComposedBy>
+        <node id="https://ror.org/04861m839"/>
+      </isComposedBy>
+    </node>
+    <node id="AFIP" label="Associação Fundo de Incentivo à Pesquisa (AFIP)">
+      <isComposedBy>
+        <node id="https://ror.org/040y74d88"/>
+      </isComposedBy>
+    </node>
+    <node id="BNDES" label="Banco Nacional de Desenvolvimento Econômico e Social (BNDES)">
+      <isComposedBy>
+        <node id="https://ror.org/0145x2c32"/>
+      </isComposedBy>
+    </node>
+    <node id="BP" label="Biolab Pharma (BP)">
+      <isComposedBy>
+        <node id="https://ror.org/01wy46p27"/>
+      </isComposedBy>
+    </node>
+    <node id="ABC" label="Academia Brasileira de Ciências (ABC)">
+      <isComposedBy>
+        <node id="https://ror.org/01e3hnz98"/>
+      </isComposedBy>
+    </node>
+    <node id="FUNBIO" label="Fundo Brasileiro para a Biodiversidade (FUNBIO)">
+      <isComposedBy>
+        <node id="https://ror.org/01hgwcx28"/>
+      </isComposedBy>
+    </node>
+    <node id="CNPEM" label="Centro Brasileiro de Pesquisas em Energia e Materiais (CNPEM)">
+      <isComposedBy>
+        <node id="https://ror.org/05m235j20"/>
+      </isComposedBy>
+    </node>
+    <node id="IBAMA" label="Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA)">
+      <isComposedBy>
+        <node id="https://ror.org/057g0br29"/>
+      </isComposedBy>
+    </node>
+    <node id="AMB" label="Associação Médica Brasileira (AMB)">
+      <isComposedBy>
+        <node id="https://ror.org/01chj3z31"/>
+      </isComposedBy>
+    </node>
+    <node id="LNLS" label="Laboratório Nacional de Luz Síncrotron (LNLS)">
+      <isComposedBy>
+        <node id="https://ror.org/01p6gzq21"/>
+      </isComposedBy>
+    </node>
+    <node id="CDTN" label="Centro de Desenvolvimento da Tecnologia Nuclear (CDTN)">
+      <isComposedBy>
+        <node id="https://ror.org/005e8tf31"/>
+      </isComposedBy>
+    </node>
+    <node id="CNPADSP" label="Centro Nacional de Processamento de Alto Desempenho em São Paulo (CNPADSP)">
+      <isComposedBy>
+        <node id="https://ror.org/048gtwm90"/>
+      </isComposedBy>
+    </node>
+    <node id="CETESB" label="CETESB - Companhia Ambiental do Estado de São Paulo (CETESB)">
+      <isComposedBy>
+        <node id="https://ror.org/05thfhs30"/>
+      </isComposedBy>
+    </node>
+    <node id="CTEMGS" label="Ciência e Tecnologia do Estado do Mato Grosso do Sul (CTEMGS)">
+      <isComposedBy>
+        <node id="https://ror.org/05jtrt935"/>
+      </isComposedBy>
+    </node>
+    <node id="UCRCU" label="Universidade Comunitária da Região de Chapecó - Unochapecó (UCRCU)">
+      <isComposedBy>
+        <node id="https://ror.org/00crnyv53"/>
+      </isComposedBy>
+    </node>
+    <node id="CBMM" label="Companhia Brasileira de Metalurgia e Mineração (CBMM)">
+      <isComposedBy>
+        <node id="https://ror.org/03k8d9631"/>
+      </isComposedBy>
+    </node>
+    <node id="CEMG" label="Companhia Energética de Minas Gerais (CEMG)">
+      <isComposedBy>
+        <node id="https://ror.org/02kbrsj34"/>
+      </isComposedBy>
+    </node>
+    <node id="CESP" label="Companhia Energética de São Paulo (CESP)">
+      <isComposedBy>
+        <node id="https://ror.org/05pmc2b98"/>
+      </isComposedBy>
+    </node>
+    <node id="CNFEAP" label="Conselho Nacional das Fundações Estaduais de Amparo à Pesquisa (CNFEAP)">
+      <isComposedBy>
+        <node id="https://ror.org/05vkxf738"/>
+      </isComposedBy>
+    </node>
+    <node id="ELETROBRAS" label="Eletrobras (ELETROBRAS)">
+      <isComposedBy>
+        <node id="https://ror.org/0017kmw32"/>
+      </isComposedBy>
+    </node>
+    <node id="EPAMIG" label="Empresa de Pesquisa Agropecuária de Minas Gerais (EPAMIG)">
+      <isComposedBy>
+        <node id="https://ror.org/034bdyc78"/>
+      </isComposedBy>
+    </node>
+    <node id="EMPARN" label="Empresa de Pesquisa Agropecuária do Rio Grande do Norte (EMPARN)">
+      <isComposedBy>
+        <node id="https://ror.org/003cq3m13"/>
+      </isComposedBy>
+    </node>
+    <node id="EBAPE" label="Escola Brasileira de Administração Pública e de Empresas (EBAPE)">
+      <isComposedBy>
+        <node id="https://ror.org/04q8h6b75"/>
+      </isComposedBy>
+    </node>
+    <node id="ENSP" label="Escola Nacional de Saúde Pública (ENSP)">
+      <isComposedBy>
+        <node id="https://ror.org/02xm1d907"/>
+      </isComposedBy>
+    </node>
+    <node id="FMM" label="Faculdade de Medicina de Marília (FMM)">
+      <isComposedBy>
+        <node id="https://ror.org/00pm9hx30"/>
+      </isComposedBy>
+    </node>
+    <node id="FAMERP" label="Faculdade de Medicina de São José do Rio Preto (FAMERP)">
+      <isComposedBy>
+        <node id="https://ror.org/052e6h087"/>
+      </isComposedBy>
+    </node>
+    <node id="FMABC" label="Faculdade de Medicina do ABC (FMABC)">
+      <isComposedBy>
+        <node id="https://ror.org/047s7ag77"/>
+      </isComposedBy>
+    </node>
+    <node id="GOVBR" label="Governo Federal do Brasil (GOVBR)">
+      <isComposedBy>
+        <node id="https://ror.org/00n0s9w57"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPESPA" label="Fundação Amazônia Paraense de Amparo à Pesquisa (FAPESPA)">
+      <isComposedBy>
+        <node id="https://ror.org/00ssgrj25"/>
+      </isComposedBy>
+    </node>
+    <node id="FADP" label="Fundação Amparo e Desenvolvimento da Pesquisa (FADP)">
+      <isComposedBy>
+        <node id="https://ror.org/01qpm0v79"/>
+      </isComposedBy>
+    </node>
+    <node id="FA" label="Fundação Araucária (FA)">
+      <isComposedBy>
+        <node id="https://ror.org/02r7nkw81"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPERJ" label="Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ)">
+      <isComposedBy>
+        <node id="https://ror.org/03kk0s825"/>
+      </isComposedBy>
+    </node>
+    <node id="FUNCAP" label="Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico (FUNCAP)">
+      <isComposedBy>
+        <node id="https://ror.org/007pgtp80"/>
+      </isComposedBy>
+    </node>
+    <node id="FACEPE" label="Fundação de Amparo à Ciência e Tecnologia de Pernambuco (FACEPE)">
+      <isComposedBy>
+        <node id="https://ror.org/02te5rf52"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPESB" label="Fundação de Amparo à Pesquisa do Estado da Bahia (FAPESB)">
+      <isComposedBy>
+        <node id="https://ror.org/0473khm44"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPESQ" label="Fundação de Amparo à Pesquisa do Estado da Paraíba (FAPESQ)">
+      <isComposedBy>
+        <node id="https://ror.org/021y4b202"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEMG" label="Fundação de Amparo à Pesquisa do Estado de Mato Grosso (FAPEMG)">
+      <isComposedBy>
+        <node id="https://ror.org/05hdz2063"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEMIG" label="Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG)">
+      <isComposedBy>
+        <node id="https://ror.org/00nc55f03"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEAM" label="Fundação de Amparo à Pesquisa do Estado do Amazonas (FAPEAM)">
+      <isComposedBy>
+        <node id="https://ror.org/026d6ma13"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEMAT" label="Fundação de Amparo à Pesquisa do Estado do Mato Grosso (FAPEMAT)">
+      <isComposedBy>
+        <node id="https://ror.org/05hdz2063"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEPI" label="Fundação de Amparo à Pesquisa do Estado do Piauí (FAPEPI)">
+      <isComposedBy>
+        <node id="https://ror.org/026zht694"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPERJ" label="Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ)">
+      <isComposedBy>
+        <node id="https://ror.org/03kk0s825"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPERGS" label="Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul (FAPERGS)">
+      <isComposedBy>
+        <node id="https://ror.org/05k49za97"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPT" label="Fundação de Amparo à Pesquisa do Estado do Tocantins (FAPT)">
+      <isComposedBy>
+        <node id="https://ror.org/026d6ma13"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPDCTM" label="Fundação de Amparo à Pesquisa e ao Desenvolvimento Científico e Tecnológico do Maranhão (FAPDCTM)">
+      <isComposedBy>
+        <node id="https://ror.org/03vqm2n93"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPIES" label="Fundação de Amparo à Pesquisa e Inovação do Espírito Santo (FAPIES)">
+      <isComposedBy>
+        <node id="https://ror.org/03cen2c33"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPESC" label="Fundação de Amparo à Pesquisa e Inovação do Estado de Santa Catarina (FAPESC)">
+      <isComposedBy>
+        <node id="https://ror.org/0503xdx77"/>
+      </isComposedBy>
+    </node>
+    <node id="FADP" label="Fundação de Amparo e Desenvolvimento da Pesquisa (FADP)">
+      <isComposedBy>
+        <node id="https://ror.org/01qpm0v79"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPDF" label="Fundação de Apoio à Pesquisa do Distrito Federal (FAPDF)">
+      <isComposedBy>
+        <node id="https://ror.org/04djvx395"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPEP" label="Fundação de Apoio à Pesquisa do Estado da Paraíba (FAPEP)">
+      <isComposedBy>
+        <node id="https://ror.org/021y4b202"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPERN" label="Fundação de Apoio à Pesquisa do Rio Grande do Norte (FAPERN)">
+      <isComposedBy>
+        <node id="https://ror.org/05c2t0m16"/>
+      </isComposedBy>
+    </node>
+    <node id="FAPITEC" label="Fundação de Apoio à Pesquisa e à Inovação Tecnológica do Estado de Sergipe (FAPITEC)">
+      <isComposedBy>
+        <node id="https://ror.org/05n28ff84"/>
+      </isComposedBy>
+    </node>
+    <node id="FADECTEMGS" label="Fundação de Apoio ao Desenvolvimento do Ensino, Ciência e Tecnologia do Estado de Mato Grosso do Sul (FADECTEMGS)">
+      <isComposedBy>
+        <node id="https://ror.org/05jtrt935"/>
+      </isComposedBy>
+    </node>
+    <node id="FAEPAHCFMRPUSP" label="Fundação de Apoio ao Ensino, Pesquisa e Assistência do Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto da Universidade de São Paulo (FAEPAHCFMRPUSP)">
+      <isComposedBy>
+        <node id="https://ror.org/011rw2y56"/>
+      </isComposedBy>
+    </node>
+    <node id="FDT" label="Fundação de Desenvolvimento de Tecnópolis (FDT)">
+      <isComposedBy>
+        <node id="https://ror.org/02bf8p515"/>
+      </isComposedBy>
+    </node>
+    <node id="FEPMVZ" label="Fundação de Estudo e Pesquisa em Medicina Veterinária e Zootecnia (FEPMVZ)">
+      <isComposedBy>
+        <node id="https://ror.org/02npjmq89"/>
+      </isComposedBy>
+    </node>
+    <node id="FTEA" label="Fundação de Tecnologia do Estado do Acre (FTEA)">
+      <isComposedBy>
+        <node id="https://ror.org/057xgt263"/>
+      </isComposedBy>
+    </node>
+    <node id="FC" label="Fundação do Câncer (FC)">
+      <isComposedBy>
+        <node id="https://ror.org/01qeqe711"/>
+      </isComposedBy>
+    </node>
+    <node id="FG" label="Fundação Gorceix (FG)">
+      <isComposedBy>
+        <node id="https://ror.org/026ftd493"/>
+      </isComposedBy>
+    </node>
+    <node id="FL" label="Fundação Lemann (FL)">
+      <isComposedBy>
+        <node id="https://ror.org/04yy13d34"/>
+      </isComposedBy>
+    </node>
+    <node id="FIOCRUZ" label="Fundação Oswaldo Cruz (FIOCRUZ)">
+      <isComposedBy>
+        <node id="https://ror.org/04jhswv08"/>
+      </isComposedBy>
+    </node>
+    <node id="FDU" label="Fundação para o Desenvolvimento da UNESP (FDU)">
+      <isComposedBy>
+        <node id="https://ror.org/022b8mr96"/>
+      </isComposedBy>
+    </node>
+    <node id="FUJB" label="Fundação Universitária José Bonifácio (FUJB)">
+      <isComposedBy>
+        <node id="https://ror.org/02wk1td69"/>
+      </isComposedBy>
+    </node>
+    <node id="FDC" label="Fundo de Defesa da Citricultura (FDC)">
+      <isComposedBy>
+        <node id="https://ror.org/0010qfz59"/>
+      </isComposedBy>
+    </node>
+    <node id="HCPA" label="Hospital de Clínicas de Porto Alegre (HCPA)">
+      <isComposedBy>
+        <node id="https://ror.org/010we4y38"/>
+      </isComposedBy>
+    </node>
+    <node id="HIAE" label="Hospital Israelita Albert Einstein (HIAE)">
+      <isComposedBy>
+        <node id="https://ror.org/04cwrbc27"/>
+      </isComposedBy>
+    </node>
+    <node id="ISAPFI" label="Instituto Sul-Americano de Pesquisa Fundamental ICTP (ISAPFI)">
+      <isComposedBy>
+        <node id="https://ror.org/0021fvv57"/>
+      </isComposedBy>
+    </node>
+    <node id="IPA" label="Instituto Agronômico de Pernambuco (IPA)">
+      <isComposedBy>
+        <node id="https://ror.org/002gr9f09"/>
+      </isComposedBy>
+    </node>
+    <node id="BUTANTAN" label="Instituto Butantan (BUTANTAN)">
+      <isComposedBy>
+        <node id="https://ror.org/01whwkf30"/>
+      </isComposedBy>
+    </node>
+    <node id="ICMBio" label="Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)">
+      <isComposedBy>
+        <node id="https://ror.org/04s5p1a35"/>
+      </isComposedBy>
+    </node>
+    <node id="IDSM" label="Instituto de Desenvolvimento Sustentável Mamirauá (IDSM)">
+      <isComposedBy>
+        <node id="https://ror.org/04encyw73"/>
+      </isComposedBy>
+    </node>
+    <node id="IEAUSP" label="Instituto de Estudos Avançados da Universidade de São Paulo (IEAUSP)">
+      <isComposedBy>
+        <node id="https://ror.org/04t6wsp57"/>
+      </isComposedBy>
+    </node>
+    <node id="ITAL" label="Instituto de Tecnologia de Alimentos (ITAL)">
+      <isComposedBy>
+        <node id="https://ror.org/0099s0h07"/>
+      </isComposedBy>
+    </node>
+    <node id="ITP" label="Instituto de Tecnologia e Pesquisa (ITP)">
+      <isComposedBy>
+        <node id="https://ror.org/02s5x7p23"/>
+      </isComposedBy>
+    </node>
+    <node id="INCA" label="Instituto Nacional de Câncer (INCA)">
+      <isComposedBy>
+        <node id="https://ror.org/055n68305"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTC" label="Instituto Nacional de Ciência e Tecnologia da Criosfera (INCTC)">
+      <isComposedBy>
+        <node id="https://ror.org/037pstq92"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTABAA" label="Instituto Nacional de Ciência e Tecnologia de Adaptações da Biota Aquática da Amazônia (INCTABAA)">
+      <isComposedBy>
+        <node id="https://ror.org/00ps5mk11"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTCSMN" label="Instituto Nacional de Ciência e Tecnologia de Catálise em Sistemas Moleculares e Nanoestruturados (INCTCSMN)">
+      <isComposedBy>
+        <node id="https://ror.org/01wwe2m47"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTCA" label="Instituto Nacional de Ciência e Tecnologia de Ciência Animal (INCTCA)">
+      <isComposedBy>
+        <node id="https://ror.org/01zr65j15"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTDT" label="Instituto Nacional de Ciência e Tecnologia de Doenças Tropicais (INCTDT)">
+      <isComposedBy>
+        <node id="https://ror.org/05fbb1126"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTIQ" label="Instituto Nacional de Ciência e Tecnologia de Informação Quântica (INCTIQ)">
+      <isComposedBy>
+        <node id="https://ror.org/02pzj0897"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTNT" label="Instituto Nacional de Ciência e Tecnologia de Neurociência Translacional (INCTNT)">
+      <isComposedBy>
+        <node id="https://ror.org/03cqmba17"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTOD" label="Instituto Nacional de Ciência e Tecnologia de Obesidade e Diabetes (INCTOD)">
+      <isComposedBy>
+        <node id="https://ror.org/026n0rw09"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTPRB" label="Instituto Nacional de Ciência e Tecnologia de Processos Redox em Biomedicina (INCTPRB)">
+      <isComposedBy>
+        <node id="https://ror.org/02zdrev82"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTBPN" label="Instituto Nacional de Ciência e Tecnologia em Biodiversidade e Produtos Naturais (INCTBPN)">
+      <isComposedBy>
+        <node id="https://ror.org/00fhn5k08"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTEO" label="Instituto Nacional de Ciência e Tecnologia em Eletrônica Orgânica (INCTEO)">
+      <isComposedBy>
+        <node id="https://ror.org/02z2wec49"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTEN" label="Instituto Nacional de Ciência e Tecnologia em Excitotoxicidade e Neuroproteção (INCTEN)">
+      <isComposedBy>
+        <node id="https://ror.org/03tydf244"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTNC" label="Instituto Nacional de Ciência e Tecnologia em Nanomateriais de Carbono (INCTNC)">
+      <isComposedBy>
+        <node id="https://ror.org/0266vkh91"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTCIPP" label="Instituto Nacional de Ciência e Tecnologia para o Controle das Intoxicações por Plantas (INCTCIPP)">
+      <isComposedBy>
+        <node id="https://ror.org/04d357y30"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTTM" label="Instituto Nacional de Ciência e Tecnologia Translacional em Medicina (INCTTM)">
+      <isComposedBy>
+        <node id="https://ror.org/01vt9w950"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTFNA" label="Instituto Nacional de Ciência e Tecnologia: Física Nuclear e Aplicações (INCTFNA)">
+      <isComposedBy>
+        <node id="https://ror.org/04qk9rk19"/>
+      </isComposedBy>
+    </node>
+    <node id="INEE" label="Instituto Nacional de Energia Elétrica (INEE)">
+      <isComposedBy>
+        <node id="https://ror.org/058yyz752"/>
+      </isComposedBy>
+    </node>
+    <node id="INPA" label="Instituto Nacional de Pesquisas da Amazônia (INPA)">
+      <isComposedBy>
+        <node id="https://ror.org/01xe86309"/>
+      </isComposedBy>
+    </node>
+    <node id="INPE" label="Instituto Nacional de Pesquisas Espaciais (INPE)">
+      <isComposedBy>
+        <node id="https://ror.org/04xbn6x09"/>
+      </isComposedBy>
+    </node>
+    <node id="IS" label="Instituto Serrapilheira (IS)">
+      <isComposedBy>
+        <node id="https://ror.org/050q5pk40"/>
+      </isComposedBy>
+    </node>
+    <node id="ITA" label="Instituto Tecnológico de Aeronáutica (ITA)">
+      <isComposedBy>
+        <node id="https://ror.org/05vh67662"/>
+      </isComposedBy>
+    </node>
+    <node id="IU" label="Instituto Uniemp (IU)">
+      <isComposedBy>
+        <node id="https://ror.org/02qsdbe73"/>
+      </isComposedBy>
+    </node>
+    <node id="LNN" label="Laboratório Nacional de Nanotecnologia (LNN)">
+      <isComposedBy>
+        <node id="https://ror.org/03e51yr27"/>
+      </isComposedBy>
+    </node>
+    <node id="IM" label="Instituto do Milênio (IM)">
+      <isComposedBy>
+        <node id="https://ror.org/05bcewb51"/>
+      </isComposedBy>
+    </node>
+    <node id="MS" label="Ministério da Saúde (MS)">
+      <isComposedBy>
+        <node id="https://ror.org/02y7p0749"/>
+      </isComposedBy>
+    </node>
+    <node id="MAPA" label="Ministério da Agricultura Pecuária e Abastecimento (MAPA)">
+      <isComposedBy>
+        <node id="https://ror.org/04mj0y667"/>
+      </isComposedBy>
+    </node>
+    <node id="MEC" label="Ministério da Educação (MEC)">
+      <isComposedBy>
+        <node id="https://ror.org/04d0xx942"/>
+      </isComposedBy>
+    </node>
+    <node id="MCTI" label="Ministério da Ciência Tecnologia e Inovação (MCTI)">
+      <isComposedBy>
+        <node id="https://ror.org/050zdnc69"/>
+      </isComposedBy>
+    </node>
+    <node id="RNP" label="Rede Nacional de Ensino e Pesquisa (RNP)">
+      <isComposedBy>
+        <node id="https://ror.org/04hztxs45"/>
+      </isComposedBy>
+    </node>
+    <node id="INTA" label="Instituto Nacional de Toxicologia Aquática (INTA)">
+      <isComposedBy>
+        <node id="https://ror.org/001c3w852"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTFCÓ" label="Instituto Nacional de Ciência e Tecnologia Fotônica para Comunicações Ópticas (INCTFCÓ)">
+      <isComposedBy>
+        <node id="https://ror.org/00derzd22"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTM" label="Instituto Nacional de Ciência e Tecnologia de Matemática (INCTM)">
+      <isComposedBy>
+        <node id="https://ror.org/02g9hzn44"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTFC" label="Instituto Nacional de Ciência e Tecnologia de Fluidos Complexos (INCTFC)">
+      <isComposedBy>
+        <node id="https://ror.org/03xqexp83"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTBEB" label="Instituto Nacional de Ciência e Tecnologia de Biologia Estrutural e Bioimagem (INCTBEB)">
+      <isComposedBy>
+        <node id="https://ror.org/044x68458"/>
+      </isComposedBy>
+    </node>
+    <node id="INCTFM" label="Instituto Nacional de Ciência e Tecnologia de Fármacos e Medicamentos (INCTFM)">
+      <isComposedBy>
+        <node id="https://ror.org/053efsj20"/>
+      </isComposedBy>
+    </node>
+    <node id="INT" label="Instituto Nacional de Telecomunicações (INT)">
+      <isComposedBy>
+        <node id="https://ror.org/0378w3a30"/>
+      </isComposedBy>
+    </node>
+    <node id="INGMP" label="Instituto Nacional de Genética Médica Populacional (INGMP)">
+      <isComposedBy>
+        <node id="https://ror.org/02x6jsy35"/>
+      </isComposedBy>
+    </node>
+    <node id="CNEN" label="Comissão Nacional de Energia Nuclear (CNEN)">
+      <isComposedBy>
+        <node id="https://ror.org/03ycms792"/>
+      </isComposedBy>
+    </node>
+    <node id="PETROBRAS" label="Petrobras (PETROBRAS)">
+      <isComposedBy>
+        <node id="https://ror.org/0235kyq22"/>
+      </isComposedBy>
+    </node>
+    <node id="SCTICEIS" label="Secretaria de Ciência, Tecnologia e Inovação e do Complexo Econômico-Industrial da Saúde (SCTICEIS)">
+      <isComposedBy>
+        <node id="https://ror.org/03thp2a78"/>
+      </isComposedBy>
+    </node>
+    <node id="SECTI" label="Secretaria de Estado da Ciência, Tecnologia e Inovação (SECTI)">
+      <isComposedBy>
+        <node id="https://ror.org/02yk6f609"/>
+      </isComposedBy>
+    </node>
+    <node id="SECTI" label="Secretaria de Estado de Ciência Tecnologia e Inovação (SECTI)">
+      <isComposedBy>
+        <node id="https://ror.org/04th3yy26"/>
+      </isComposedBy>
+    </node>
+    <node id="PTS" label="Parque Tecnológico de Sergipe (PTS)">
+      <isComposedBy>
+        <node id="https://ror.org/0131ca207"/>
+      </isComposedBy>
+    </node>
+    <node id="SB" label="Shell Brasil (SB)">
+      <isComposedBy>
+        <node id="https://ror.org/02dd40221"/>
+      </isComposedBy>
+    </node>
+    <node id="SBA" label="Sociedade Brasileira de Anestesiologia (SBA)">
+      <isComposedBy>
+        <node id="https://ror.org/02yrvm198"/>
+      </isComposedBy>
+    </node>
+    <node id="SBOT" label="Sociedade Brasileira de Ortopedia e Traumatologia (SBOT)">
+      <isComposedBy>
+        <node id="https://ror.org/001hpw566"/>
+      </isComposedBy>
+    </node>
+    <node id="SBP" label="Sociedade Brasileira de Pediatria (SBP)">
+      <isComposedBy>
+        <node id="https://ror.org/00c0q8820"/>
+      </isComposedBy>
+    </node>
+    <node id="SBI" label="Sociedade Brasileira Infectologia (SBI)">
+      <isComposedBy>
+        <node id="https://ror.org/03gsev974"/>
+      </isComposedBy>
+    </node>
+  </isComposedBy>
+</node>
