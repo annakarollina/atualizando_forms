@@ -178,6 +178,12 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
+        <!-- UFCAT: terceiro passo do fluxo traditional (fallback) — direitos COAR e área CNPq -->
+        <step-definition id="traditionalpagerights" mandatory="true">
+            <heading>submit.progressbar.describe.stepthree</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
         <step-definition id="ufcatdissertation_step1" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -342,22 +348,22 @@
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattcc" mandatory="true">
-            <heading>TCC: Identificação</heading>
+            <heading>tcc.identification</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattccautoria" mandatory="true">
-            <heading>TCC: Autoria e banca</heading>
+            <heading>tcc.authorship</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattccdescricao" mandatory="true">
-            <heading>TCC: Descrição</heading>
+            <heading>tcc.description</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcattccdireitos" mandatory="true">
-            <heading>TCC: Direitos</heading>
+            <heading>tcc.rights</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -536,6 +542,7 @@
             <!--Step will be to Describe the item. -->
             <step id="traditionalpageone"/>
             <step id="traditionalpagetwo"/>
+            <step id="traditionalpagerights"/>
 
             <!-- Uncomment this step to allow the user to embargo or access restrict the entire item -->
             <!-- <step id="itemAccessConditions"/> -->
@@ -823,6 +830,7 @@
             <!--Step will be to Describe the item. -->
             <step id="traditionalpageone"/>
             <step id="traditionalpagetwo"/>
+            <step id="traditionalpagerights"/>
 
             <!-- Uncomment this step to allow the user to embargo or access restrict the entire item -->
             <!-- <step id="itemAccessConditions"/> -->

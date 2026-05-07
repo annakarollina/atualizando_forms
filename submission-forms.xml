@@ -233,6 +233,50 @@
             </row>
         </form>
 
+        <!-- UFCAT: terceiro passo do traditional — direitos de acesso (COAR) e área CNPq para fallback -->
+        <form name="traditionalpagerights">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>access</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Permissão de acesso ao documento</label>
+                    <style>col-md-12</style>
+                    <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
+                    <hint>Acesso aberto: texto integral disponível. Acesso a metadados (valor COAR c_14cb): apenas metadados ao público. Acesso restrito: integral para grupo restrito. Acesso embargado: informe a data de disponibilização abaixo quando aplicável.</hint>
+                    <required>Informe o tipo de acesso ao documento.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>available</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de liberação para acesso</label>
+                    <style>col-md-12</style>
+                    <input-type>date</input-type>
+                    <hint>Opcional: data em que o documento ficará disponível (útil para embargo ou liberação futura).</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>cnpq</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Área do CNPq</label>
+                    <style>col-md-12</style>
+                    <input-type>twobox</input-type>
+                    <vocabulary closed="true">cnpq</vocabulary>
+                    <hint>Selecione a área conforme o vocabulário cnpq.xml (tabela CNPq). Recomendado para depósitos institucionais.</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
