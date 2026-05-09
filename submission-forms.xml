@@ -1554,7 +1554,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso fechado (closedAccess): ao público só metadados; administrador com acesso ao integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; indique também a data no passo 1 ou aqui quando aplicável.</hint>
+                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso a metadados (COAR c_14cb): ao público apenas os metadados; administrador com acesso ao texto integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; indique também a data no passo 1 ou aqui quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -2081,7 +2081,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso fechado (closedAccess): ao público só metadados; administrador com acesso ao integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; utilize a data de liberação no passo 1 quando aplicável.</hint>
+                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso a metadados (COAR c_14cb): ao público apenas os metadados; administrador com acesso ao texto integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; utilize a data de liberação no passo 1 quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -3451,7 +3451,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-6</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): o acesso ao documento é direto e imediato; disponibilização online sem restrições ao texto integral. Acesso fechado (closedAccess): oposto ao aberto; apenas metadados ao público (texto integral só para administração). Acesso restrito (restrictedAccess): só metadados ao público em geral; texto integral para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): texto integral não disponível de imediato; indique nos metadados a data em que passará a aberto (campo data de disponibilidade).</hint>
+                    <hint>Acesso aberto (Open Access): o acesso ao documento é direto e imediato; disponibilização online sem restrições ao texto integral. Acesso a metadados (COAR c_14cb): apenas os metadados ficam públicos (texto integral só para administração). Acesso restrito (restrictedAccess): só metadados ao público em geral; texto integral para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): texto integral não disponível de imediato; indique nos metadados a data em que passará a aberto (campo data de disponibilidade).</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -3942,13 +3942,13 @@
         </value-pairs>
 
         <value-pairs value-pairs-name="ufcat_access_rights" dc-term="rights.access">
-            <!-- URIs COAR Access Rights / OpenAIRE — alinhadas à taxonomia institutionais TEDE -->
+            <!-- URIs COAR Access Rights / OpenAIRE — alinhadas à taxonomia institucional TEDE e ao access_rights_for_dspace_pt.xml -->
             <pair>
                 <displayed-value>Acesso aberto (Open Access)</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
             </pair>
             <pair>
-                <displayed-value>Acesso fechado (closedAccess — ao público só metadados)</displayed-value>
+                <displayed-value>Acesso a metadados</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
             </pair>
             <pair>
@@ -4517,7 +4517,7 @@
                 <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
             </pair>
             <pair>
-                <displayed-value>Acesso fechado (closedAccess — ao público só metadados)</displayed-value>
+                <displayed-value>Acesso a metadados</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
             </pair>
             <pair>

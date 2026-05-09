@@ -25,8 +25,13 @@
         <name-map collection-handle="123456789/12209" submission-name="resolutionProcess"/>
         <name-map collection-handle="123456789/12208" submission-name="policyProcess"/>
         <name-map collection-handle="123456789/12210" submission-name="administrativeOtherProcess"/>
+        <!-- UFCAT: Documentos Regulatórios e Instruções (BIBLIOTECA UNIVERSITÁRIA) -->
+        <name-map collection-handle="123456789/11826" submission-name="administrativeOtherProcess"/>
+
+        <!-- Nota: 123456789/12223 e 123456789/12220 permanecem mapeados como tccProcess. As coleções homolog Enfermagem e Ciências Sociais licenciatura foram excluídas, liberando esses handles. Após a importação da produção, eles atenderão Matemática Industrial e Matemática (licenciatura) como tccProcess. -->
+
         <name-map collection-handle="123456789/12213" submission-name="tccProcess"/>
-        <name-map collection-handle="123456789/12214" submission-name="tccProcess"/>
+        <!-- TODO TI/UFCAT: TCC Administração - handle 123456789/12214 colidia com TCC Matemática Industrial em produção. Aguardando novo handle do homolog para reativar como tccProcess. -->
         <name-map collection-handle="123456789/12215" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12216" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12217" submission-name="tccProcess"/>
@@ -41,7 +46,7 @@
         <name-map collection-handle="123456789/12226" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12227" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12228" submission-name="tccProcess"/>
-        <name-map collection-handle="123456789/12229" submission-name="tccProcess"/>
+        <!-- TODO TI/UFCAT: TCC Física bacharelado - handle 123456789/12229 colidia com TCC Matemática licenciatura em produção. Aguardando novo handle do homolog para reativar como tccProcess. -->
         <name-map collection-handle="123456789/12230" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12231" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12232" submission-name="tccProcess"/>
@@ -70,7 +75,7 @@
         <name-map collection-handle="tede/74" submission-name="dissProcess_geografia"/>
         <name-map collection-handle="tede/76" submission-name="dissProcess_historia"/>
         <name-map collection-handle="tede/78" submission-name="dissProcess_matematica"/>
-        <name-map collection-handle="tede/4010" submission-name="dissProcess_modelagem"/>
+        <name-map collection-handle="tede/40" submission-name="dissProcess_modelagem"/>
         <name-map collection-handle="tede/66" submission-name="dissProcess_quimica"/>
 
         <!-- UFCAT: colecoes de doutorado usam o fluxo de tese -->
