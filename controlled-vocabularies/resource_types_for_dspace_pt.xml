@@ -90,11 +90,11 @@ Initial example: https://github.com/4Science/DSpace/blob/dspace-cris-7/dspace/co
         </node>
       </isComposedBy>
     </node>
-    <node id="542X-3S04" label="desenho">
+    <node id="542X-3S04" label="design">
       <hasNote>
         <![CDATA[Plans, drawing or set of drawings showing how something e.g. building, product is to be made and how it will work and look. [Source: Adapted from https://dictionary.cambridge.org/dictionary/english/design]]]></hasNote>
       <isComposedBy>
-        <node id="JBNF-DYAD" label="desenho industrial">
+        <node id="JBNF-DYAD" label="design industrial">
           <hasNote>
             <![CDATA[Industrial designs are applied to a wide variety of industrial products and handicrafts. They refer to the ornamental or aesthetic aspects of a useful article,including compositions of lines or colors or any three-dimensional forms that give a special appearance to a product or handicraft. [Source: https://www.wipo.int/edocs/pubdocs/en/wipo_pub_943_2018.pdf]]]></hasNote>
         </node>
@@ -162,7 +162,7 @@ exploit their inventions on an exclusive basis. [Source: https://www.wipo.int/ed
           <hasNote>
             <![CDATA[A patent application filed through the WIPO-administered Patent Cooperation Treaty (PCT), also known as an international application. [Source: Adapted from https://www.wipo.int/edocs/pubdocs/en/wipo_pub_943_2018.pdf]]]></hasNote>
         </node>
-        <node id="C53B-JCY5" label="registo de desenho">
+        <node id="C53B-JCY5" label="registro de design">
           <hasNote>
             <![CDATA[A patent granted to any person who has invented any new and non-obvious ornamental design for an article of manufacture. The design patent protects only the appearance of an article, but not its structural or functional features. [Source: Adapted from https://www.uspto.gov/patents/basics/types-patent-applications/design-patent-application-guide#def]]]></hasNote>
         </node>

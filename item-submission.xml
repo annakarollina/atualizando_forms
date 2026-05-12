@@ -204,8 +204,8 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-        <step-definition id="ufcatdissertation_step4" mandatory="true">
-            <heading>dissertation.committee</heading>
+        <step-definition id="ufcatdissertation_direitos" mandatory="true">
+            <heading>dissertation.rights</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -229,8 +229,8 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-        <step-definition id="ufcatthesis_step4" mandatory="true">
-            <heading>thesis.committee</heading>
+        <step-definition id="ufcatthesis_direitos" mandatory="true">
+            <heading>thesis.rights</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -485,7 +485,7 @@
             <step id="ufcatdissertation_step1"/>
             <step id="ufcatdissertation_step2"/>
             <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
+            <step id="ufcatdissertation_direitos"/>
             <step id="ufcatdissertation_step5"/>
             <step id="upload"/>
             <step id="license"/>
@@ -497,7 +497,7 @@
             <step id="ufcatthesis_step1"/>
             <step id="ufcatthesis_step2"/>
             <step id="ufcatthesis_step3"/>
-            <step id="ufcatthesis_step4"/>
+            <step id="ufcatthesis_direitos"/>
             <step id="ufcatthesis_step5"/>
             <step id="upload"/>
             <step id="license"/>

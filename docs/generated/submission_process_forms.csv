@@ -1,7 +1,7 @@
 submission_process,describe_form_steps_in_order
 traditional,traditionalpageone | traditionalpagetwo | traditionalpagerights
-dissertationProcess,ufcatdissertation_step1 | ufcatdissertation_step2 | ufcatdissertation_step3 | ufcatdissertation_step4 | ufcatdissertation_step5
-thesisProcess,ufcatthesis_step1 | ufcatthesis_step2 | ufcatthesis_step3 | ufcatthesis_step4 | ufcatthesis_step5
+dissertationProcess,ufcatdissertation_step1 | ufcatdissertation_step2 | ufcatdissertation_step3 | ufcatdissertation_direitos | ufcatdissertation_step5
+thesisProcess,ufcatthesis_step1 | ufcatthesis_step2 | ufcatthesis_step3 | ufcatthesis_direitos | ufcatthesis_step5
 ordinanceProcess,ufcatordinance
 resolutionProcess,ufcatresolution
 policyProcess,ufcatpolicy

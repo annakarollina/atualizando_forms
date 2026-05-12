@@ -241,7 +241,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso abaixo quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -1318,10 +1318,10 @@
                     <dc-element>rights</dc-element>
                     <dc-qualifier>uri</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Selecione a licença Creative Commons (OpenAIRE)</label>
+                    <label>Licença Creative Commons</label>
                     <style>col-md-12</style>
-                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
-                    <hint>Selecione a URI da licença CC conforme as diretrizes OpenAIRE.</hint>
+                    <input-type value-pairs-name="ufcat_license_cc_by_open">dropdown</input-type>
+                    <hint>Preencher só para Acesso aberto e Acesso embargado.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1542,32 +1542,6 @@
                     <required></required>
                 </field>
             </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier>access</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Permissão de acesso ao documento</label>
-                    <style>col-md-12</style>
-                    <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
-                    <required>Informe o tipo de acesso ao documento.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>available</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Data de liberação para acesso</label>
-                    <style>col-md-12</style>
-                    <input-type>date</input-type>
-                    <hint>Data de disponibilidade do registo; pode diferir do texto completo em embargo ou restrição.</hint>
-                    <required></required>
-                </field>
-            </row>
         </form>
 
         <form name="ufcatdissertation_step2">
@@ -1643,71 +1617,6 @@
                     <required></required>
                 </field>
             </row>
-        </form>
-
-        <form name="ufcatdissertation_step3">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome da instituição por extenso</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_name">dropdown</input-type>
-                    <hint>Nome da instituição por extenso.</hint>
-                    <required>A instituição é obrigatória.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>country</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>País</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_country">dropdown</input-type>
-                    <hint>Informe o país da instituição.</hint>
-                    <required>O país é obrigatório.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>initials</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Sigla da instituição</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type>
-                    <hint>Sigla da instituição.</hint>
-                    <required>A sigla é obrigatória.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>department</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Unidade acadêmica</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="ufcat_units">dropdown</input-type>
-                    <hint>Nome, por extenso, da unidade responsável pelo programa.</hint>
-                    <required>A unidade acadêmica é obrigatória.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>program</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Programa de pós-graduação</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type>
-                    <hint>Selecione o programa de mestrado.</hint>
-                    <required>O programa é obrigatório.</required>
-                </field>
-            </row>
-        </form>
-
-        <form name="ufcatdissertation_step4">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1825,6 +1734,135 @@
                     <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
+        <form name="ufcatdissertation_step3">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome da instituição por extenso</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_name">dropdown</input-type>
+                    <hint>Nome da instituição por extenso.</hint>
+                    <required>A instituição é obrigatória.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>País</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_country">dropdown</input-type>
+                    <hint>Informe o país da instituição.</hint>
+                    <required>O país é obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>initials</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Sigla da instituição</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type>
+                    <hint>Sigla da instituição.</hint>
+                    <required>A sigla é obrigatória.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>department</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Unidade acadêmica</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_units">dropdown</input-type>
+                    <hint>Nome, por extenso, da unidade responsável pelo programa.</hint>
+                    <required>A unidade acadêmica é obrigatória.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>program</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Programa de pós-graduação</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type>
+                    <hint>Selecione o programa de mestrado.</hint>
+                    <required>O programa é obrigatório.</required>
+                </field>
+            </row>
+        </form>
+
+        <!-- UFCAT: dissertação — direitos e citação (espelho boas-práticas TCC) -->
+        <form name="ufcatdissertation_direitos">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>access</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Permissão de acesso ao documento</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access): texto integral público de imediato; (2) Acesso a metadados (ClosedAccess): o público tem acesso somente os metadados; (3) Acesso restrito (restrictedAccess): texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso abaixo quando aplicável.</hint>
+                    <required>Informe o tipo de acesso ao documento.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença Creative Commons</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_license_cc_by_open">dropdown</input-type>
+                    <hint>Preencher só para Acesso aberto e Acesso embargado.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>available</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de liberação para acesso</label>
+                    <style>col-md-12</style>
+                    <input-type>date</input-type>
+                    <hint>Data de disponibilidade do registro; pode diferir do texto completo em embargo ou restrição.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe a citação recomendada</label>
+                    <style>col-md-12</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a referência ou citação bibliográfica recomendada para a dissertação.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença ou declaração de direitos (texto livre)</label>
+                    <style>col-md-12</style>
+                    <input-type>onebox</input-type>
+                    <hint>Complemento opcional (declaração adicional ou restrições não cobertas pelos campos anteriores).</hint>
                     <required></required>
                 </field>
             </row>
@@ -1930,19 +1968,6 @@
                     <required>O idioma é obrigatório.</required>
                 </field>
             </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Licença ou declaração de direitos (texto livre)</label>
-                    <style>col-md-12</style>
-                    <input-type>onebox</input-type>
-                    <hint>Complemento à permissão de acesso: licença CC ou declaração de direitos, se aplicável.</hint>
-                    <required></required>
-                </field>
-            </row>
         </form>
 
         <!-- UFCAT: tese em 5 passos (espelho TEDE) -->
@@ -1981,32 +2006,6 @@
                     <label>Título(s) alternativo(s)</label>
                     <input-type>onebox</input-type>
                     <hint>Informe título alternativo, tradução ou subtítulo, quando houver.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier>access</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Permissão de acesso ao documento</label>
-                    <style>col-md-12</style>
-                    <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
-                    <required>Informe o tipo de acesso ao documento.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>available</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Data de liberação para acesso</label>
-                    <style>col-md-12</style>
-                    <input-type>date</input-type>
-                    <hint>Data de disponibilidade do registo; pode diferir do texto completo em embargo ou restrição.</hint>
                     <required></required>
                 </field>
             </row>
@@ -2085,71 +2084,6 @@
                     <required></required>
                 </field>
             </row>
-        </form>
-
-        <form name="ufcatthesis_step3">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome da instituição por extenso</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_name">dropdown</input-type>
-                    <hint>Nome da instituição por extenso.</hint>
-                    <required>A instituição é obrigatória.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>country</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>País</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_country">dropdown</input-type>
-                    <hint>Informe o país da instituição.</hint>
-                    <required>O país é obrigatório.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>initials</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Sigla da instituição</label>
-                    <style>col-md-4</style>
-                    <input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type>
-                    <hint>Sigla da instituição.</hint>
-                    <required>A sigla é obrigatória.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>department</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Unidade acadêmica</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="ufcat_units">dropdown</input-type>
-                    <hint>Nome, por extenso, da unidade responsável pelo programa.</hint>
-                    <required>A unidade acadêmica é obrigatória.</required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier>program</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Programa de pós-graduação</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="ufcat_thesis_courses">dropdown</input-type>
-                    <hint>Selecione o programa de doutorado.</hint>
-                    <required>O programa é obrigatório.</required>
-                </field>
-            </row>
-        </form>
-
-        <form name="ufcatthesis_step4">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -2272,6 +2206,135 @@
             </row>
         </form>
 
+        <form name="ufcatthesis_step3">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome da instituição por extenso</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_name">dropdown</input-type>
+                    <hint>Nome da instituição por extenso.</hint>
+                    <required>A instituição é obrigatória.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>País</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_country">dropdown</input-type>
+                    <hint>Informe o país da instituição.</hint>
+                    <required>O país é obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>initials</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Sigla da instituição</label>
+                    <style>col-md-4</style>
+                    <input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type>
+                    <hint>Sigla da instituição.</hint>
+                    <required>A sigla é obrigatória.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>department</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Unidade acadêmica</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_units">dropdown</input-type>
+                    <hint>Nome, por extenso, da unidade responsável pelo programa.</hint>
+                    <required>A unidade acadêmica é obrigatória.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>program</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Programa de pós-graduação</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_thesis_courses">dropdown</input-type>
+                    <hint>Selecione o programa de doutorado.</hint>
+                    <required>O programa é obrigatório.</required>
+                </field>
+            </row>
+        </form>
+
+        <!-- UFCAT: tese — direitos e citação (espelho boas-práticas TCC) -->
+        <form name="ufcatthesis_direitos">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>access</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Permissão de acesso ao documento</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access): texto integral público de imediato; (2) Acesso a metadados (Closed Access): o público tem acesso somente os metadados; (3) Acesso restrito (restricted Access): texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess): integral só após a data prevista no campo "Data de liberação para acesso".</hint>
+                    <required>Informe o tipo de acesso ao documento.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença Creative Commons</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_license_cc_by_open">dropdown</input-type>
+                    <hint>Preencher só para Acesso aberto e Acesso embargado.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>available</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de liberação para acesso</label>
+                    <style>col-md-12</style>
+                    <input-type>date</input-type>
+                    <hint>Data de disponibilidade do registro; pode diferir do texto completo em embargo ou restrição.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe a citação recomendada</label>
+                    <style>col-md-12</style>
+                    <input-type>onebox</input-type>
+                    <hint>Informe a referência ou citação bibliográfica recomendada para a tese.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença ou declaração de direitos (texto livre)</label>
+                    <style>col-md-12</style>
+                    <input-type>onebox</input-type>
+                    <hint>Complemento opcional (declaração adicional ou restrições não cobertas pelos campos anteriores).</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
         <form name="ufcatthesis_step5">
             <row>
                 <field>
@@ -2370,19 +2433,6 @@
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
                     <hint>Informe o idioma em que o documento está escrito.</hint>
                     <required>O idioma é obrigatório.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Licença ou declaração de direitos (texto livre)</label>
-                    <style>col-md-12</style>
-                    <input-type>onebox</input-type>
-                    <hint>Complemento à permissão de acesso: licença CC ou declaração de direitos, se aplicável.</hint>
-                    <required></required>
                 </field>
             </row>
         </form>
@@ -3395,24 +3445,24 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
-                    <dc-qualifier>uri</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Selecione a licença Creative Commons (OpenAIRE)</label>
-                    <style>col-md-6</style>
-                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
-                    <hint>Selecione a URI da licença CC conforme indicada no TECA.</hint>
-                    <required></required>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
                     <dc-qualifier>access</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-6</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso abaixo quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Licença Creative Commons</label>
+                    <style>col-md-6</style>
+                    <input-type value-pairs-name="ufcat_license_cc_by_open">dropdown</input-type>
+                    <hint>Preencher só para Acesso aberto e Acesso embargado.</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -3871,15 +3921,15 @@
                 <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
             </pair>
             <pair>
-                <displayed-value>Acesso a metadados</displayed-value>
+                <displayed-value>Acesso a metadados (ClosedAccess)</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
             </pair>
             <pair>
-                <displayed-value>Acesso restrito (restrictedAccess)</displayed-value>
+                <displayed-value>Acesso restrito (Restricted Access)</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_16ec</stored-value>
             </pair>
             <pair>
-                <displayed-value>Acesso embargado (embargoedAccess)</displayed-value>
+                <displayed-value>Acesso embargado (Embargoed Access)</displayed-value>
                 <stored-value>http://purl.org/coar/access_right/c_f1cf</stored-value>
             </pair>
         </value-pairs>
@@ -4105,6 +4155,14 @@
                 <stored-value>other</stored-value>
             </pair>
 
+        </value-pairs>
+
+        <!-- UFCAT: licença CC BY 4.0 para dc.rights.uri (aberto ou embargado; ver hint no formulário) -->
+        <value-pairs value-pairs-name="ufcat_license_cc_by_open" dc-term="license">
+            <pair>
+                <displayed-value>CC BY 4.0 — Atribuição</displayed-value>
+                <stored-value>https://creativecommons.org/licenses/by/4.0/</stored-value>
+            </pair>
         </value-pairs>
 
         <!-- OpenAIRE document types

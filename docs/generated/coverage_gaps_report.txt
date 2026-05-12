@@ -10,8 +10,6 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
 
 - Autor da produção intelectual
   Triplets guia: dc.creator._
-  · traditional: nenhum de dc.creator._
-  · traditional-edit: nenhum de dc.creator._
   · Publication: nenhum de dc.creator._
   · Dataset: nenhum de dc.creator._
   · openairePublicationSubmission: nenhum de dc.creator._
@@ -198,8 +196,6 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
 - URI de acesso à licença de direitos autorais da produção intelectual
   Triplets guia: dc.rights.uri
   · traditional: nenhum de dc.rights.uri
-  · dissertationProcess: nenhum de dc.rights.uri
-  · thesisProcess: nenhum de dc.rights.uri
   · ordinanceProcess: nenhum de dc.rights.uri
   · resolutionProcess: nenhum de dc.rights.uri
   · policyProcess: nenhum de dc.rights.uri
