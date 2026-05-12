@@ -16,7 +16,7 @@ URI do identificador único da produção intelectual,capes:outputUri,dc.identif
 Permissão de acesso à produção intelectual,dcterms:rights,dc.rights._,,no,yes,yes,no,no
 URI de acesso à licença de direitos autorais da produção intelectual,dcterms:license,dc.rights.uri,,no,no,no,yes,yes
 Nome do Programa de Pós-Graduação ao qual a produção intelectual possui vínculo,capes:hasProgram,dc.publisher.program,,no,yes,yes,no,no
-Data de liberação para acesso ao texto completo da produção intelectual,dcterms:available,dc.date.available,,no,yes,yes,yes,no
+Data de liberação para acesso ao texto completo da produção intelectual,dcterms:available,dc.date.available,,yes,yes,yes,yes,no
 Produção intelectual relacionada,dcterms:relation,dc.relation.none,,no,no,no,no,yes
 Nome do Orientador,capes:advisor,dc.contributor.advisor1,,no,yes,yes,yes,no
 Nome do Coorientador,capes:coAdvisor,dc.contributor.advisor-co1,,no,yes,yes,yes,no

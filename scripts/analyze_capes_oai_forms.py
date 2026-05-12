@@ -305,7 +305,6 @@ def main() -> int:
     focus_prefixes = (
         "traditional",
         "dissertation",
-        "dissProcess",
         "thesisProcess",
         "tcc",
         "ordinance",

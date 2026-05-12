@@ -1,0 +1,35 @@
+---
+description: >-
+  Submissão DSpace 9 (UFCAT): contratos item-submission.xml e submission-forms.xml.
+  Aplica-se ao editar mapeamento de coleções, processos e formulários de depósito.
+globs:
+  - "**/item-submission.xml"
+  - "**/submission-forms.xml"
+alwaysApply: false
+---
+
+# DSpace 9 — `item-submission.xml` e `submission-forms.xml`
+
+Contexto alinhado a [AGENTS.md](../../AGENTS.md) na raiz; lê esse ficheiro para política completa (versão 9, deploy, anti-padrões).
+
+## Obrigatório
+
+- **Alvo DSpace 9.x.** Não assumir DSpace 6/7, JSPUI ou REST antigo sem verificar doc/código da major 9.
+- **`item-submission.xml` — `<submission-map>`:** cada `<name-map collection-handle="..." submission-name="..."/>` deve apontar para um `<submission-process name="...">` **existente**. O handle `default` mapeia o fallback (aqui `traditional`).
+- **Passos:** todo `<step id="X">` num `<submission-process>` precisa de `<step-definition id="X">` com o mesmo `id`.
+- **`submission-forms.xml` — DescribeStep:** se o passo for `submission-form` / `DescribeStep`, tem de existir `<form name="X">` com o **mesmo** nome que o `id` do passo.
+- **Headings no REST:** preferir chaves semânticas (`tcc.*`, `dissertation.*`, `thesis.*`) e traduções `submission.sections.{heading}` em `Messages_pt_BR.properties`. Evitar repetir `submit.progressbar.describe.stepone` em vários passos (rótulos duplicados no UI).
+- **Metadados em campos novos:** qualificadores `dc.*` custom exigem entrada no **registro de metadados** do servidor; senão o REST pode omitir o campo.
+
+## Ao alterar mapas ou nomes de processo
+
+- Atualizar [docs/handles_UFCAT_Mapeamento.csv](../../docs/handles_UFCAT_Mapeamento.csv) para não divergir do `submission-map`.
+
+## Não fazer
+
+- Novo `<submission-process>` sem `name-map` (ou plano explícito) que o referencie.
+- Remover `<submission-process>` ainda referenciado por qualquer `submission-name` no mapa.
+
+## Opcional
+
+- Checklist longo: skill do projeto **dspace9-ufcat-submission** — [SKILL.md](../skills/dspace9-ufcat-submission/SKILL.md).

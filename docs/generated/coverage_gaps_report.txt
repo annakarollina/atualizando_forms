@@ -39,87 +39,54 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
   · traditional: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · dissertationProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · thesisProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_educacao: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_engcivil: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_engprod: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_linguagem: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_geografia: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_gestao: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_historia: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_modelagem: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_quimica: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_fisica: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_matematica: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_saude: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_profbio: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · dissProcess_ppgcem: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · thesisProcess_linguagem: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · thesisProcess_quimica: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · thesisProcess_cet: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · thesisProcess_ppgcem: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · ordinanceProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · resolutionProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · policyProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
   · administrativeOtherProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
-  · ... e mais 8 processos
+  · tccProcess: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · traditional-edit: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · Publication: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · Dataset: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · openairePublicationSubmission: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · openairePersonSubmission: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · openaireProjectSubmission: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
+  · openaireOrganizationSubmission: nenhum de dc.creator.ID, dc.contributor.advisor1ID, dc.contributor.advisor-co1ID, dc.contributor.referee1ID, dc.contributor.referee2ID, dc.contributor.referee3ID, dc.contributor.referee4ID, dc.contributor.referee5ID
 
 - Identificador ResearcherID da pessoa da produção intelectual
   Triplets guia: dc.contributor.researcherID|dc.creator.researcherID
   · traditional: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · dissertationProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · thesisProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_educacao: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_engcivil: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_engprod: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_linguagem: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_geografia: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_gestao: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_historia: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_modelagem: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_quimica: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_fisica: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_matematica: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_saude: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_profbio: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · dissProcess_ppgcem: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · thesisProcess_linguagem: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · thesisProcess_quimica: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · thesisProcess_cet: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · thesisProcess_ppgcem: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · ordinanceProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · resolutionProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · policyProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
   · administrativeOtherProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
-  · ... e mais 8 processos
+  · tccProcess: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · traditional-edit: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · Publication: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · Dataset: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · openairePublicationSubmission: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · openairePersonSubmission: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · openaireProjectSubmission: nenhum de dc.contributor.researcherID, dc.creator.researcherID
+  · openaireOrganizationSubmission: nenhum de dc.contributor.researcherID, dc.creator.researcherID
 
 - Identificador Scopus Author ID da pessoa da produção intelectual
   Triplets guia: dc.contributor.scopusID|dc.creator.scopusID
   · traditional: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · dissertationProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · thesisProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_educacao: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_engcivil: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_engprod: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_linguagem: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_geografia: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_gestao: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_historia: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_modelagem: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_quimica: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_fisica: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_matematica: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_saude: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_profbio: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · dissProcess_ppgcem: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · thesisProcess_linguagem: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · thesisProcess_quimica: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · thesisProcess_cet: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · thesisProcess_ppgcem: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · ordinanceProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · resolutionProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · policyProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
   · administrativeOtherProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
-  · ... e mais 8 processos
+  · tccProcess: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · traditional-edit: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · Publication: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · Dataset: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · openairePublicationSubmission: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · openairePersonSubmission: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · openaireProjectSubmission: nenhum de dc.contributor.scopusID, dc.creator.scopusID
+  · openaireOrganizationSubmission: nenhum de dc.contributor.scopusID, dc.creator.scopusID
 
 - Título da produção intelectual
   Triplets guia: dc.title._
@@ -167,29 +134,18 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
   · traditional: nenhum de dc.subject.gr, dc.subject.en
   · dissertationProcess: nenhum de dc.subject.gr, dc.subject.en
   · thesisProcess: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_educacao: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_engcivil: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_engprod: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_linguagem: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_geografia: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_gestao: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_historia: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_modelagem: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_quimica: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_fisica: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_matematica: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_saude: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_profbio: nenhum de dc.subject.gr, dc.subject.en
-  · dissProcess_ppgcem: nenhum de dc.subject.gr, dc.subject.en
-  · thesisProcess_linguagem: nenhum de dc.subject.gr, dc.subject.en
-  · thesisProcess_quimica: nenhum de dc.subject.gr, dc.subject.en
-  · thesisProcess_cet: nenhum de dc.subject.gr, dc.subject.en
-  · thesisProcess_ppgcem: nenhum de dc.subject.gr, dc.subject.en
   · ordinanceProcess: nenhum de dc.subject.gr, dc.subject.en
   · resolutionProcess: nenhum de dc.subject.gr, dc.subject.en
   · policyProcess: nenhum de dc.subject.gr, dc.subject.en
   · administrativeOtherProcess: nenhum de dc.subject.gr, dc.subject.en
-  · ... e mais 8 processos
+  · tccProcess: nenhum de dc.subject.gr, dc.subject.en
+  · traditional-edit: nenhum de dc.subject.gr, dc.subject.en
+  · Publication: nenhum de dc.subject.gr, dc.subject.en
+  · Dataset: nenhum de dc.subject.gr, dc.subject.en
+  · openairePublicationSubmission: nenhum de dc.subject.gr, dc.subject.en
+  · openairePersonSubmission: nenhum de dc.subject.gr, dc.subject.en
+  · openaireProjectSubmission: nenhum de dc.subject.gr, dc.subject.en
+  · openaireOrganizationSubmission: nenhum de dc.subject.gr, dc.subject.en
 
 - Idioma principal da produção intelectual
   Triplets guia: dc.language._
@@ -211,29 +167,17 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
   · traditional: nenhum de dc.identifier.uri
   · dissertationProcess: nenhum de dc.identifier.uri
   · thesisProcess: nenhum de dc.identifier.uri
-  · dissProcess_educacao: nenhum de dc.identifier.uri
-  · dissProcess_engcivil: nenhum de dc.identifier.uri
-  · dissProcess_engprod: nenhum de dc.identifier.uri
-  · dissProcess_linguagem: nenhum de dc.identifier.uri
-  · dissProcess_geografia: nenhum de dc.identifier.uri
-  · dissProcess_gestao: nenhum de dc.identifier.uri
-  · dissProcess_historia: nenhum de dc.identifier.uri
-  · dissProcess_modelagem: nenhum de dc.identifier.uri
-  · dissProcess_quimica: nenhum de dc.identifier.uri
-  · dissProcess_fisica: nenhum de dc.identifier.uri
-  · dissProcess_matematica: nenhum de dc.identifier.uri
-  · dissProcess_saude: nenhum de dc.identifier.uri
-  · dissProcess_profbio: nenhum de dc.identifier.uri
-  · dissProcess_ppgcem: nenhum de dc.identifier.uri
-  · thesisProcess_linguagem: nenhum de dc.identifier.uri
-  · thesisProcess_quimica: nenhum de dc.identifier.uri
-  · thesisProcess_cet: nenhum de dc.identifier.uri
-  · thesisProcess_ppgcem: nenhum de dc.identifier.uri
   · ordinanceProcess: nenhum de dc.identifier.uri
   · resolutionProcess: nenhum de dc.identifier.uri
   · policyProcess: nenhum de dc.identifier.uri
   · administrativeOtherProcess: nenhum de dc.identifier.uri
-  · ... e mais 7 processos
+  · tccProcess: nenhum de dc.identifier.uri
+  · traditional-edit: nenhum de dc.identifier.uri
+  · Publication: nenhum de dc.identifier.uri
+  · Dataset: nenhum de dc.identifier.uri
+  · openairePublicationSubmission: nenhum de dc.identifier.uri
+  · openairePersonSubmission: nenhum de dc.identifier.uri
+  · openaireOrganizationSubmission: nenhum de dc.identifier.uri
 
 - Permissão de acesso à produção intelectual
   Triplets guia: dc.rights._
@@ -256,29 +200,16 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
   · traditional: nenhum de dc.rights.uri
   · dissertationProcess: nenhum de dc.rights.uri
   · thesisProcess: nenhum de dc.rights.uri
-  · dissProcess_educacao: nenhum de dc.rights.uri
-  · dissProcess_engcivil: nenhum de dc.rights.uri
-  · dissProcess_engprod: nenhum de dc.rights.uri
-  · dissProcess_linguagem: nenhum de dc.rights.uri
-  · dissProcess_geografia: nenhum de dc.rights.uri
-  · dissProcess_gestao: nenhum de dc.rights.uri
-  · dissProcess_historia: nenhum de dc.rights.uri
-  · dissProcess_modelagem: nenhum de dc.rights.uri
-  · dissProcess_quimica: nenhum de dc.rights.uri
-  · dissProcess_fisica: nenhum de dc.rights.uri
-  · dissProcess_matematica: nenhum de dc.rights.uri
-  · dissProcess_saude: nenhum de dc.rights.uri
-  · dissProcess_profbio: nenhum de dc.rights.uri
-  · dissProcess_ppgcem: nenhum de dc.rights.uri
-  · thesisProcess_linguagem: nenhum de dc.rights.uri
-  · thesisProcess_quimica: nenhum de dc.rights.uri
-  · thesisProcess_cet: nenhum de dc.rights.uri
-  · thesisProcess_ppgcem: nenhum de dc.rights.uri
   · ordinanceProcess: nenhum de dc.rights.uri
   · resolutionProcess: nenhum de dc.rights.uri
   · policyProcess: nenhum de dc.rights.uri
   · administrativeOtherProcess: nenhum de dc.rights.uri
-  · ... e mais 6 processos
+  · traditional-edit: nenhum de dc.rights.uri
+  · Publication: nenhum de dc.rights.uri
+  · Dataset: nenhum de dc.rights.uri
+  · openairePersonSubmission: nenhum de dc.rights.uri
+  · openaireProjectSubmission: nenhum de dc.rights.uri
+  · openaireOrganizationSubmission: nenhum de dc.rights.uri
 
 - Nome do Programa de Pós-Graduação ao qual a produção intelectual possui vínculo
   Triplets guia: dc.publisher.program
@@ -298,12 +229,10 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
 
 - Data de liberação para acesso ao texto completo da produção intelectual
   Triplets guia: dc.date.available
-  · traditional: nenhum de dc.date.available
   · ordinanceProcess: nenhum de dc.date.available
   · resolutionProcess: nenhum de dc.date.available
   · policyProcess: nenhum de dc.date.available
   · administrativeOtherProcess: nenhum de dc.date.available
-  · traditional-edit: nenhum de dc.date.available
   · Publication: nenhum de dc.date.available
   · Dataset: nenhum de dc.date.available
   · openairePublicationSubmission: nenhum de dc.date.available
@@ -316,29 +245,13 @@ Linhas do guia (OR entre dc.* da mesma célula) onde nenhum triplet está presen
   · traditional: nenhum de dc.relation.none
   · dissertationProcess: nenhum de dc.relation.none
   · thesisProcess: nenhum de dc.relation.none
-  · dissProcess_educacao: nenhum de dc.relation.none
-  · dissProcess_engcivil: nenhum de dc.relation.none
-  · dissProcess_engprod: nenhum de dc.relation.none
-  · dissProcess_linguagem: nenhum de dc.relation.none
-  · dissProcess_geografia: nenhum de dc.relation.none
-  · dissProcess_gestao: nenhum de dc.relation.none
-  · dissProcess_historia: nenhum de dc.relation.none
-  · dissProcess_modelagem: nenhum de dc.relation.none
-  · dissProcess_quimica: nenhum de dc.relation.none
-  · dissProcess_fisica: nenhum de dc.relation.none
-  · dissProcess_matematica: nenhum de dc.relation.none
-  · dissProcess_saude: nenhum de dc.relation.none
-  · dissProcess_profbio: nenhum de dc.relation.none
-  · dissProcess_ppgcem: nenhum de dc.relation.none
-  · thesisProcess_linguagem: nenhum de dc.relation.none
-  · thesisProcess_quimica: nenhum de dc.relation.none
-  · thesisProcess_cet: nenhum de dc.relation.none
-  · thesisProcess_ppgcem: nenhum de dc.relation.none
   · tccProcess: nenhum de dc.relation.none
   · traditional-edit: nenhum de dc.relation.none
   · Publication: nenhum de dc.relation.none
   · Dataset: nenhum de dc.relation.none
-  · ... e mais 3 processos
+  · openairePersonSubmission: nenhum de dc.relation.none
+  · openaireProjectSubmission: nenhum de dc.relation.none
+  · openaireOrganizationSubmission: nenhum de dc.relation.none
 
 - Nome do Orientador
   Triplets guia: dc.contributor.advisor1

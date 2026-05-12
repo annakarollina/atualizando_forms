@@ -1,31 +1,13 @@
 submission_process,describe_form_steps_in_order
-traditional,traditionalpageone | traditionalpagetwo
-dissertationProcess,ufcatdissertation
-thesisProcess,ufcatthesis
-dissProcess_educacao,ufcatdissertation
-dissProcess_engcivil,ufcatdissertation
-dissProcess_engprod,ufcatdissertation
-dissProcess_linguagem,ufcatdissertation
-dissProcess_geografia,ufcatdissertation
-dissProcess_gestao,ufcatdissertation
-dissProcess_historia,ufcatdissertation
-dissProcess_modelagem,ufcatdissertation
-dissProcess_quimica,ufcatdissertation
-dissProcess_fisica,ufcatdissertation
-dissProcess_matematica,ufcatdissertation
-dissProcess_saude,ufcatdissertation
-dissProcess_profbio,ufcatdissertation
-dissProcess_ppgcem,ufcatdissertation
-thesisProcess_linguagem,ufcatthesis
-thesisProcess_quimica,ufcatthesis
-thesisProcess_cet,ufcatthesis
-thesisProcess_ppgcem,ufcatthesis
+traditional,traditionalpageone | traditionalpagetwo | traditionalpagerights
+dissertationProcess,ufcatdissertation_step1 | ufcatdissertation_step2 | ufcatdissertation_step3 | ufcatdissertation_step4 | ufcatdissertation_step5
+thesisProcess,ufcatthesis_step1 | ufcatthesis_step2 | ufcatthesis_step3 | ufcatthesis_step4 | ufcatthesis_step5
 ordinanceProcess,ufcatordinance
 resolutionProcess,ufcatresolution
 policyProcess,ufcatpolicy
 administrativeOtherProcess,ufcatadministrativeother
 tccProcess,ufcattcc | ufcattccautoria | ufcattccdescricao | ufcattccdireitos
-traditional-edit,traditionalpageone | traditionalpagetwo
+traditional-edit,traditionalpageone | traditionalpagetwo | traditionalpagerights
 Publication,publicationStep | traditionalpagetwo
 publication-edit,publicationStep | traditionalpagetwo
 Person,personStep

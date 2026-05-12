@@ -54,8 +54,7 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
+                    <dc-element>creator</dc-element>
                     <repeatable>true</repeatable>
                     <label>Autor(es)</label>
                     <input-type>onebox</input-type>
@@ -141,12 +140,11 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                     <label>Identificadores</label>
                     <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                    <hint>Se o item tiver números/códigos de identificação, informe o tipo e o respectivo valor.
-                        Ex.: Nº de documento governamental = número de ato, decreto, portaria, processo, publicação oficial.
+                    <hint>Se o item tiver códigos de identificação, informe o tipo e o respectivo valor.
+                        Ex.: ISBN, ISSN, DOI.
                     </hint>
                     <required></required>
                 </field>
@@ -185,11 +183,10 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of tag MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                     <label>Palavras-chave</label>
                     <input-type>tag</input-type>
-                    <hint>Informe palavras-chave adequadas; sugere-se também termos em inglês.</hint>
+                    <hint>Informe palavras-chave adequadas.</hint>
                     <required></required>
                     <vocabulary>srsc</vocabulary>
                 </field>
@@ -244,7 +241,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto: texto integral disponível. Acesso a metadados (valor COAR c_14cb): apenas metadados ao público. Acesso restrito: integral para grupo restrito. Acesso embargado: informe a data de disponibilização abaixo quando aplicável.</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -831,7 +828,7 @@
                     <relationship-type>isJournalVolumeOfIssue</relationship-type>
                     <search-configuration>journalvolume</search-configuration>
                     <label>Volume do periódico</label>
-                    <hint>Selecione o volume do periódico relacionado a este fascículo.</hint>
+                    <hint>Selecione o volume do periódico relacionado a esta edição.</hint>
                 </relation-field>
             </row>
             <row>
@@ -1554,7 +1551,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso a metadados (COAR c_14cb): ao público apenas os metadados; administrador com acesso ao texto integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; indique também a data no passo 1 ou aqui quando aplicável.</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -1717,10 +1714,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee1</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 1</label>
+                    <label>Informe o membro da banca 1</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 1.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee1Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 1</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -1729,10 +1738,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee2</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 2</label>
+                    <label>Informe o membro da banca 2</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 2.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee2Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 2</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -1741,10 +1762,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee3</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 3</label>
+                    <label>Informe o membro da banca 3</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
+                    <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 3.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -1753,9 +1786,21 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee4</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 4</label>
+                    <label>Informe o membro da banca 4</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
+                    <hint>Opcional. Nome no formato: Sobrenome, Nome.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee4Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 4</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
                     <required></required>
                 </field>
             </row>
@@ -1765,9 +1810,21 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee5</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 5</label>
+                    <label>Informe o membro da banca 5</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
+                    <hint>Opcional. Nome no formato: Sobrenome, Nome.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee5Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 5</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
                     <required></required>
                 </field>
             </row>
@@ -1803,20 +1860,33 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_por">true</language>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave</label>
+                    <label>Palavras-chave em português</label>
+                    <style>col-md-4</style>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave; sugere-se também termos em inglês.</hint>
+                    <hint>Repita para inserir vários termos. Palavras-chaves em português.</hint>
                     <required></required>
                 </field>
-            </row>
-            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_eng">true</language>
+                    <repeatable>true</repeatable>
+                    <label>Keywords em inglês (dc.subject · eng)</label>
+                    <style>col-md-4</style>
+                    <input-type>tag</input-type>
+                    <hint>Repita para inserir vários termos. Keywords no idioma inglês.</hint>
+                    <required></required>
+                </field>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Área do CNPq</label>
+                    <style>col-md-4</style>
                     <input-type>twobox</input-type>
                     <vocabulary closed="true">cnpq</vocabulary>
                     <hint>Selecione a área conforme a tabela do CNPq.</hint>
@@ -1875,164 +1945,6 @@
             </row>
         </form>
 
-        <!-- UFCAT: formulários mínimos por programa (briefing 2026) -->
-        <form name="ufcatdiss_educacao">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>O nome do autor é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_name">dropdown</input-type><hint>Nome da instituição por extenso.</hint><required>A instituição é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>country</dc-qualifier><repeatable>false</repeatable><label>País da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_country">dropdown</input-type><hint>País da instituição.</hint><required>O país da instituição é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>initials</dc-qualifier><repeatable>false</repeatable><label>Sigla da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type><hint>Sigla da instituição.</hint><required>A sigla da instituição é obrigatória.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>department</dc-qualifier><repeatable>false</repeatable><label>Unidade acadêmica</label><style>col-md-6</style><input-type value-pairs-name="ufcat_units">dropdown</input-type><hint>Selecione a unidade acadêmica responsável pelo programa.</hint><required>A unidade acadêmica é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>program</dc-qualifier><repeatable>false</repeatable><label>Programa de pós-graduação</label><style>col-md-6</style><input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type><hint>Selecione o programa de mestrado.</hint><required>O programa é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_educacao">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome do orientador no formato: Sobrenome, Nome.</hint><required>O orientador é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>twobox</input-type><vocabulary closed="true">sponsorship_br</vocabulary><hint>Selecione a agência na lista (vocabulário Agências de Fomento). Opcional.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>O tipo do trabalho é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>O idioma é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Informe a licença ou declaração de direitos aplicável.</hint><required></required></field></row>
-        </form>
-        <form name="ufcatdiss_engcivil">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>O nome do autor é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_name">dropdown</input-type><hint>Nome da instituição por extenso.</hint><required>A instituição é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>country</dc-qualifier><repeatable>false</repeatable><label>País da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_country">dropdown</input-type><hint>País da instituição.</hint><required>O país da instituição é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>initials</dc-qualifier><repeatable>false</repeatable><label>Sigla da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type><hint>Sigla da instituição.</hint><required>A sigla da instituição é obrigatória.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>department</dc-qualifier><repeatable>false</repeatable><label>Unidade acadêmica</label><style>col-md-6</style><input-type value-pairs-name="ufcat_units">dropdown</input-type><hint>Selecione a unidade acadêmica responsável pelo programa.</hint><required>A unidade acadêmica é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>program</dc-qualifier><repeatable>false</repeatable><label>Programa de pós-graduação</label><style>col-md-6</style><input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type><hint>Selecione o programa de mestrado.</hint><required>O programa é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_engcivil">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome do orientador no formato: Sobrenome, Nome.</hint><required>O orientador é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>twobox</input-type><vocabulary closed="true">sponsorship_br</vocabulary><hint>Selecione a agência na lista (vocabulário Agências de Fomento). Opcional.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
-        </form>
-        <form name="ufcatdiss_engprod">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>O nome do autor é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_name">dropdown</input-type><hint>Nome da instituição por extenso.</hint><required>A instituição é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>country</dc-qualifier><repeatable>false</repeatable><label>País da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_country">dropdown</input-type><hint>País da instituição.</hint><required>O país da instituição é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>initials</dc-qualifier><repeatable>false</repeatable><label>Sigla da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type><hint>Sigla da instituição.</hint><required>A sigla da instituição é obrigatória.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>department</dc-qualifier><repeatable>false</repeatable><label>Unidade acadêmica</label><style>col-md-6</style><input-type value-pairs-name="ufcat_units">dropdown</input-type><hint>Selecione a unidade acadêmica responsável pelo programa.</hint><required>A unidade acadêmica é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>program</dc-qualifier><repeatable>false</repeatable><label>Programa de pós-graduação</label><style>col-md-6</style><input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type><hint>Selecione o programa de mestrado.</hint><required>O programa é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_engprod">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome do orientador no formato: Sobrenome, Nome.</hint><required>O orientador é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>twobox</input-type><vocabulary closed="true">sponsorship_br</vocabulary><hint>Selecione a agência na lista (vocabulário Agências de Fomento). Opcional.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
-        </form>
-        <form name="ufcatdiss_linguagem">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>O nome do autor é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_name">dropdown</input-type><hint>Nome da instituição por extenso.</hint><required>A instituição é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>country</dc-qualifier><repeatable>false</repeatable><label>País da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_country">dropdown</input-type><hint>País da instituição.</hint><required>O país da instituição é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>initials</dc-qualifier><repeatable>false</repeatable><label>Sigla da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type><hint>Sigla da instituição.</hint><required>A sigla da instituição é obrigatória.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>department</dc-qualifier><repeatable>false</repeatable><label>Unidade acadêmica</label><style>col-md-6</style><input-type value-pairs-name="ufcat_units">dropdown</input-type><hint>Selecione a unidade acadêmica responsável pelo programa.</hint><required>A unidade acadêmica é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>program</dc-qualifier><repeatable>false</repeatable><label>Programa de pós-graduação</label><style>col-md-6</style><input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type><hint>Selecione o programa de mestrado.</hint><required>O programa é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_linguagem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome do orientador no formato: Sobrenome, Nome.</hint><required>O orientador é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>twobox</input-type><vocabulary closed="true">sponsorship_br</vocabulary><hint>Selecione a agência na lista (vocabulário Agências de Fomento). Opcional.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
-        </form>
-        <form name="ufcatdiss_geografia">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>O nome do autor é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_name">dropdown</input-type><hint>Nome da instituição por extenso.</hint><required>A instituição é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>country</dc-qualifier><repeatable>false</repeatable><label>País da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_country">dropdown</input-type><hint>País da instituição.</hint><required>O país da instituição é obrigatório.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>initials</dc-qualifier><repeatable>false</repeatable><label>Sigla da instituição</label><style>col-md-4</style><input-type value-pairs-name="ufcat_institution_initials">dropdown</input-type><hint>Sigla da instituição.</hint><required>A sigla da instituição é obrigatória.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>department</dc-qualifier><repeatable>false</repeatable><label>Unidade acadêmica</label><style>col-md-6</style><input-type value-pairs-name="ufcat_units">dropdown</input-type><hint>Selecione a unidade acadêmica responsável pelo programa.</hint><required>A unidade acadêmica é obrigatória.</required></field><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>program</dc-qualifier><repeatable>false</repeatable><label>Programa de pós-graduação</label><style>col-md-6</style><input-type value-pairs-name="ufcat_dissertation_courses">dropdown</input-type><hint>Selecione o programa de mestrado.</hint><required>O programa é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><style>col-md-6</style><input-type value-pairs-name="ufcat_programcode_geografia">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field><field><dc-schema>dc</dc-schema><dc-element>contributor</dc-element><dc-qualifier>advisor1</dc-qualifier><repeatable>false</repeatable><label>Orientador</label><style>col-md-6</style><input-type>onebox</input-type><hint>Informe o nome do orientador no formato: Sobrenome, Nome.</hint><required>O orientador é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Título</label><input-type>onebox</input-type><hint>Informe o título principal da dissertação.</hint><required>O título é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>resumo</dc-qualifier><repeatable>false</repeatable><label>Resumo</label><input-type>textarea</input-type><hint>Informe o resumo em português.</hint><required>O resumo é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>abstract</dc-qualifier><repeatable>false</repeatable><label>Resumo em língua estrangeira</label><input-type>textarea</input-type><hint>Informe o resumo em língua estrangeira, quando aplicável.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier></dc-qualifier><repeatable>true</repeatable><label>Palavras-chave</label><input-type>tag</input-type><hint>Informe as palavras-chave do trabalho.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>subject</dc-element><dc-qualifier>cnpq</dc-qualifier><repeatable>true</repeatable><label>Área do CNPq</label><input-type>twobox</input-type><vocabulary closed="true">cnpq</vocabulary><hint>Informe a classificação, código ou área do CNPq.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>description</dc-element><dc-qualifier>sponsorship</dc-qualifier><repeatable>true</repeatable><label>Fomento</label><input-type>twobox</input-type><vocabulary closed="true">sponsorship_br</vocabulary><hint>Selecione a agência na lista (vocabulário Agências de Fomento). Opcional.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Tipo</label><style>col-md-4</style><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Idioma</label><style>col-md-4</style><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Selecione o idioma principal do trabalho.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>rights</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Direitos</label><input-type>onebox</input-type><hint>Direitos de acesso ao documento.</hint><required>Informe os direitos de acesso.</required></field></row>
-        </form>
-        <form name="ufcatdiss_gestao">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_gestao">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_historia">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_historia">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_modelagem">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_modelagem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_quimica">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_quimica_m">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_fisica">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_fisica">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_matematica">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_matematica">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_saude">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_saude">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_profbio">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_profbio">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatdiss_ppgcem">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_ppgcem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da dissertação</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_dissertation_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-
         <!-- UFCAT: tese em 5 passos (espelho TEDE) -->
         <form name="ufcatthesis_step1">
             <row>
@@ -2081,7 +1993,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-12</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): acesso direto e imediato ao texto integral, sem obstáculo. Acesso a metadados (COAR c_14cb): ao público apenas os metadados; administrador com acesso ao texto integral. Acesso restrito (restrictedAccess): integral só para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): sem integral imediato até à data; utilize a data de liberação no passo 1 quando aplicável.</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -2244,10 +2156,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee1</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 1</label>
+                    <label>Informe o membro da banca 1</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 1.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee1Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 1</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -2256,10 +2180,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee2</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 2</label>
+                    <label>Informe o membro da banca 2</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
                     <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 2.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee2Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 2</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -2268,10 +2204,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee3</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 3</label>
+                    <label>Informe o membro da banca 3</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
+                    <hint>Informe o nome no formato: Sobrenome, Nome.</hint>
                     <required>Informe o membro da banca 3.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee3Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 3</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -2280,10 +2228,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee4</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 4</label>
+                    <label>Informe o membro da banca 4</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
-                    <required>Informe o membro da banca 4.</required>
+                    <hint>Opcional. Nome no formato: Sobrenome, Nome.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee4Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 4</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -2292,10 +2252,22 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>referee5</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Membro da banca 5</label>
+                    <label>Informe o membro da banca 5</label>
+                    <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe o nome no formato: Sobrenome, Nome, se houver.</hint>
-                    <required>Informe o membro da banca 5.</required>
+                    <hint>Opcional. Nome no formato: Sobrenome, Nome.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>referee5Lattes</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Informe o Lattes do membro da banca 5</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>URL do Currículo Lattes (opcional).</hint>
+                    <required></required>
                 </field>
             </row>
         </form>
@@ -2330,20 +2302,33 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_por">true</language>
                     <repeatable>true</repeatable>
-                    <label>Palavras-chave</label>
+                    <label>Palavras-chave em português</label>
+                    <style>col-md-4</style>
                     <input-type>tag</input-type>
-                    <hint>Informe as palavras-chave; sugere-se também termos em inglês.</hint>
+                    <hint>Repita para inserir vários termos. Palavras-chaves em português.</hint>
                     <required></required>
                 </field>
-            </row>
-            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_eng">true</language>
+                    <repeatable>true</repeatable>
+                    <label>Keywords em inglês (dc.subject · eng)</label>
+                    <style>col-md-4</style>
+                    <input-type>tag</input-type>
+                    <hint>Repita para inserir vários termos. Keywords no idioma inglês.</hint>
+                    <required></required>
+                </field>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Área do CNPq</label>
+                    <style>col-md-4</style>
                     <input-type>twobox</input-type>
                     <vocabulary closed="true">cnpq</vocabulary>
                     <hint>Selecione a área conforme a tabela do CNPq.</hint>
@@ -2400,46 +2385,6 @@
                     <required></required>
                 </field>
             </row>
-        </form>
-
-
-
-        <!-- UFCAT: formulários mínimos por programa (briefing 2026) -->
-        <form name="ufcatthesis_linguagem">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_linguagem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da tese</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_thesis_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatthesis_quimica">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_quimica_d">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da tese</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_thesis_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatthesis_cet">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_cet">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da tese</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_thesis_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
-        </form>
-        <form name="ufcatthesis_ppgcem">
-            <row><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o autor</label><input-type>onebox</input-type><hint>Informe o nome no formato: Sobrenome, Nome.</hint><required>Informe o autor do trabalho.</required></field><field><dc-schema>dc</dc-schema><dc-element>creator</dc-element><dc-qualifier>Lattes</dc-qualifier><repeatable>false</repeatable><label>Lattes do autor</label><input-type>onebox</input-type><hint>Informe a URL do Currículo Lattes do autor.</hint><required>O Currículo Lattes do autor é obrigatório.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>publisher</dc-element><dc-qualifier>programcode</dc-qualifier><repeatable>false</repeatable><label>Informe o código CAPES do programa</label><input-type value-pairs-name="ufcat_programcode_ppgcem">dropdown</input-type><hint>Código do programa na Plataforma Sucupira.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>title</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Informe o título da tese</label><input-type>onebox</input-type><hint>Título completo.</hint><required>Informe o título.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>issued</dc-qualifier><repeatable>false</repeatable><label>Data de defesa</label><input-type>date</input-type><hint>Informe a data de defesa.</hint><required>Informe a data de defesa.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>date</dc-element><dc-qualifier>available</dc-qualifier><repeatable>false</repeatable><label>Data que será disponibilizado</label><style>col-md-4</style><input-type>date</input-type><hint>Informe a data em que o item será disponibilizado publicamente.</hint><required></required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>language</dc-element><dc-qualifier>iso</dc-qualifier><repeatable>false</repeatable><label>Selecione o idioma</label><input-type value-pairs-name="common_iso_languages">dropdown</input-type><hint>Idioma principal.</hint><required>Selecione o idioma.</required></field></row>
-            <row><field><dc-schema>dc</dc-schema><dc-element>type</dc-element><dc-qualifier></dc-qualifier><repeatable>false</repeatable><label>Selecione o tipo do documento</label><input-type value-pairs-name="ufcat_thesis_type">dropdown</input-type><hint>Tipo do documento.</hint><required>Selecione o tipo.</required></field></row>
         </form>
 
         <!-- UFCAT: formulário de Portarias para documentos administrativos -->
@@ -3407,20 +3352,35 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_por">true</language>
                     <repeatable>true</repeatable>
-                    <label>Adicione as palavras-chave</label>
+                    <label>Palavras-chave em português</label>
                     <style>col-md-6</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe uma palavra-chave por campo, incluindo palavras-chave em outros idiomas quando houver.</hint>
+                    <hint>Repita para inserir vários termos. Palavras-chaves em português.</hint>
                     <required></required>
                 </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="ufcat_subject_lang_eng">true</language>
+                    <repeatable>true</repeatable>
+                    <label>Keywords em inglês</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Repita para inserir vários termos. Keywords no idioma inglês.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier>cnpq</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Informe a área do CNPq</label>
-                    <style>col-md-6</style>
+                    <style>col-md-12</style>
                     <input-type>twobox</input-type>
                     <vocabulary closed="true">cnpq</vocabulary>
                     <hint>Informe a área/código CNPq relacionada.</hint>
@@ -3451,7 +3411,7 @@
                     <label>Permissão de acesso ao documento</label>
                     <style>col-md-6</style>
                     <input-type value-pairs-name="ufcat_access_rights">dropdown</input-type>
-                    <hint>Acesso aberto (Open Access): o acesso ao documento é direto e imediato; disponibilização online sem restrições ao texto integral. Acesso a metadados (COAR c_14cb): apenas os metadados ficam públicos (texto integral só para administração). Acesso restrito (restrictedAccess): só metadados ao público em geral; texto integral para grupo restrito (ex.: IP institucional). Acesso embargado (embargoedAccess): texto integral não disponível de imediato; indique nos metadados a data em que passará a aberto (campo data de disponibilidade).</hint>
+                    <hint>Tipos de acesso: (1) Acesso aberto (Open Access) — texto integral público de imediato; (2) Acesso a metadados (ClosedAccess) — o público acessa somente os metadados; (3) Acesso restrito (restrictedAccess) — texto integral só para grupo autorizado (ex.: acesso logado); (4) Acesso embargado (embargoedAccess) — integral só após a data prevista; use o campo Data de liberação para acesso neste passo ou no passo 1 quando aplicável.</hint>
                     <required>Informe o tipo de acesso ao documento.</required>
                 </field>
             </row>
@@ -3464,7 +3424,7 @@
                     <label>Informe a citação recomendada</label>
                     <style>col-md-12</style>
                     <input-type>onebox</input-type>
-                    <hint>Informe a referência/citação recomendada para o TCC.</hint>
+                    <hint>Informe a referência recomendada para o TCC.</hint>
                     <required></required>
                 </field>
             </row>
@@ -3486,6 +3446,19 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+        <!-- UFCAT: idioma fixo por coluna em dc.subject (uma opção — por / eng) -->
+        <value-pairs value-pairs-name="ufcat_subject_lang_por" dc-term="language_iso">
+            <pair>
+                <displayed-value>Português (por)</displayed-value>
+                <stored-value>por</stored-value>
+            </pair>
+        </value-pairs>
+        <value-pairs value-pairs-name="ufcat_subject_lang_eng" dc-term="language_iso">
+            <pair>
+                <displayed-value>English (eng)</displayed-value>
+                <stored-value>eng</stored-value>
+            </pair>
+        </value-pairs>
         <!-- UFCAT: dropdown de unidades acadêmicas -->
         <value-pairs value-pairs-name="ufcat_units" dc-term="publisher_department">
             <pair>
@@ -3530,63 +3503,63 @@
             </pair>
         </value-pairs>
 
-        <!-- UFCAT: dropdown de programas de mestrado -->
+     <!-- UFCAT: dropdown de programas de mestrado -->
         <value-pairs value-pairs-name="ufcat_dissertation_courses" dc-term="publisher_program">
             <pair>
                 <displayed-value>PPGCEM - Programa de Pós-Graduação em Ciência e Engenharia de Materiais</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Ciência e Engenharia de Materiais</stored-value>
+                <stored-value>52059006001P8</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGCET - Programa de Pós-Graduação em Ciências Exatas e Tecnológicas</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Ciências Exatas e Tecnológicas</stored-value>
+                <stored-value>52059006001P8</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEF - Programa de Pós-Graduação em Ensino de Física em Rede</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Ensino de Física em Rede</stored-value>
+                <stored-value>33283010001P5</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEDUC - Programa de Pós-Graduação em Educação</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Educação</stored-value>
+                <stored-value>52059006002P4</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEC - Programa de Pós-Graduação em Engenharia Civil</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Engenharia Civil</stored-value>
+                <stored-value>52059006003P0</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEP - Programa de Pós-Graduação em Engenharia de Produção</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Engenharia de Produção</stored-value>
+                <stored-value>52059006004P7</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEL - Programa de Pós-Graduação em Estudos da Linguagem</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Estudos da Linguagem</stored-value>
+                <stored-value>52059006005P3</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGGEO - Programa de Pós-Graduação em Geografia</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Geografia</stored-value>
+                <stored-value>52059006010P7</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGGO - Programa de Pós-Graduação em Gestão Organizacional</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Gestão Organizacional</stored-value>
+                <stored-value>52059006006P0</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGH-MP - Programa de Pós-Graduação em História</displayed-value>
-                <stored-value>Programa de Pós-Graduação em História</stored-value>
+                <stored-value>52059006007P6</stored-value>
             </pair>
             <pair>
                 <displayed-value>PROFMAT - Programa de Pós-Graduação em Matemática em Rede</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Matemática em Rede</stored-value>
+                <stored-value>31075010001P2</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGMO - Programa de Pós-Graduação em Modelagem e Otimização</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Modelagem e Otimização</stored-value>
+                <stored-value>52059006008P2</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGQ - Programa de Pós-Graduação em Química</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Química</stored-value>
+                <stored-value>52059006009P9</stored-value>
             </pair>
             <pair>
                 <displayed-value>PROFSAUDE - Programa de Pós-Graduação em Saúde da Família</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Saúde da Família</stored-value>
+                <stored-value>33303002001P9</stored-value>
             </pair>
         </value-pairs>
 
@@ -3594,78 +3567,28 @@
         <value-pairs value-pairs-name="ufcat_thesis_courses" dc-term="publisher_program">
             <pair>
                 <displayed-value>PPGCEM - Programa de Pós-Graduação em Ciência e Engenharia de Materiais</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Ciência e Engenharia de Materiais</stored-value>
+                <stored-value>52059006001P8</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGCET - Programa de Pós-Graduação em Ciências Exatas e Tecnológicas</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Ciências Exatas e Tecnológicas</stored-value>
+                <stored-value>52059006001P8</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEDUC - Programa de Pós-Graduação em Educação</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Educação</stored-value>
+                <stored-value>52059006002P4</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGEL - Programa de Pós-Graduação em Estudos da Linguagem</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Estudos da Linguagem</stored-value>
+                <stored-value>52059006005P3</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGGEO - Programa de Pós-Graduação em Geografia</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Geografia</stored-value>
+                <stored-value>52059006010P7</stored-value>
             </pair>
             <pair>
                 <displayed-value>PPGQ - Programa de Pós-Graduação em Química</displayed-value>
-                <stored-value>Programa de Pós-Graduação em Química</stored-value>
+                <stored-value>51005018172P5</stored-value>
             </pair>
-        </value-pairs>
-
-        <!-- UFCAT: códigos CAPES dos programas (PROGRAMAS_handles.extracted.csv) -->
-        <value-pairs value-pairs-name="ufcat_programcode_educacao" dc-term="publisher_programcode">
-            <pair><displayed-value>Educação (52059006002P4)</displayed-value><stored-value>52059006002P4</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_engcivil" dc-term="publisher_programcode">
-            <pair><displayed-value>Engenharia Civil (52059006003P0)</displayed-value><stored-value>52059006003P0</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_engprod" dc-term="publisher_programcode">
-            <pair><displayed-value>Engenharia de Produção (52059006004P7)</displayed-value><stored-value>52059006004P7</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_fisica" dc-term="publisher_programcode">
-            <pair><displayed-value>Ensino de Física - PROFIS (33283010001P5)</displayed-value><stored-value>33283010001P5</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_linguagem" dc-term="publisher_programcode">
-            <pair><displayed-value>Estudos da Linguagem (52059006005P3)</displayed-value><stored-value>52059006005P3</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_geografia" dc-term="publisher_programcode">
-            <pair><displayed-value>Geografia (52059006010P7)</displayed-value><stored-value>52059006010P7</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_gestao" dc-term="publisher_programcode">
-            <pair><displayed-value>Gestão Organizacional (52059006006P0)</displayed-value><stored-value>52059006006P0</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_historia" dc-term="publisher_programcode">
-            <pair><displayed-value>História (52059006007P6)</displayed-value><stored-value>52059006007P6</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_matematica" dc-term="publisher_programcode">
-            <pair><displayed-value>Matemática em Rede Nacional (31075010001P2)</displayed-value><stored-value>31075010001P2</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_modelagem" dc-term="publisher_programcode">
-            <pair><displayed-value>Modelagem e Otimização (52059006008P2)</displayed-value><stored-value>52059006008P2</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_quimica_m" dc-term="publisher_programcode">
-            <pair><displayed-value>Química (Mestrado) (52059006009P9)</displayed-value><stored-value>52059006009P9</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_quimica_d" dc-term="publisher_programcode">
-            <pair><displayed-value>Química (Doutorado) (51005018172P5)</displayed-value><stored-value>51005018172P5</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_profbio" dc-term="publisher_programcode">
-            <pair><displayed-value>PROFBIO (32001010175P5)</displayed-value><stored-value>32001010175P5</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_saude" dc-term="publisher_programcode">
-            <pair><displayed-value>Saúde da Família (33303002001P9)</displayed-value><stored-value>33303002001P9</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_ppgcem" dc-term="publisher_programcode">
-            <pair><displayed-value>Ciência e Engenharia de Materiais (52059006001P8)</displayed-value><stored-value>52059006001P8</stored-value></pair>
-        </value-pairs>
-        <value-pairs value-pairs-name="ufcat_programcode_cet" dc-term="publisher_programcode">
-            <pair><displayed-value>Ciências Exatas e Tecnológicas (52059006001P8)</displayed-value><stored-value>52059006001P8</stored-value></pair>
         </value-pairs>
 
         <!-- UFCAT: emissores institucionais para documentos administrativos -->

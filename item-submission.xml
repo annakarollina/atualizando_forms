@@ -64,25 +64,25 @@
         <name-map collection-handle="123456789/12244" submission-name="tccProcess"/>
         <name-map collection-handle="123456789/12245" submission-name="tccProcess"/>
 
-        <!-- UFCAT: colecoes de mestrado usam o fluxo de dissertacao -->
-        <name-map collection-handle="tede/80" submission-name="dissProcess_gestao"/>
-        <name-map collection-handle="tede/82" submission-name="dissProcess_educacao"/>
-        <name-map collection-handle="tede/86" submission-name="dissProcess_engcivil"/>
-        <name-map collection-handle="tede/84" submission-name="dissProcess_engprod"/>
-        <name-map collection-handle="tede/62" submission-name="dissProcess_linguagem"/>
-        <name-map collection-handle="123456789/11948" submission-name="dissProcess_ppgcem"/>
-        <name-map collection-handle="tede/71" submission-name="dissProcess_fisica"/>
-        <name-map collection-handle="tede/74" submission-name="dissProcess_geografia"/>
-        <name-map collection-handle="tede/76" submission-name="dissProcess_historia"/>
-        <name-map collection-handle="tede/78" submission-name="dissProcess_matematica"/>
-        <name-map collection-handle="tede/40" submission-name="dissProcess_modelagem"/>
-        <name-map collection-handle="tede/66" submission-name="dissProcess_quimica"/>
+        <!-- UFCAT: coleções de mestrado — fluxo único de dissertação -->
+        <name-map collection-handle="tede/80" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/82" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/86" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/84" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/62" submission-name="dissertationProcess"/>
+        <name-map collection-handle="123456789/11948" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/71" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/74" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/76" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/78" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/40" submission-name="dissertationProcess"/>
+        <name-map collection-handle="tede/66" submission-name="dissertationProcess"/>
 
-        <!-- UFCAT: colecoes de doutorado usam o fluxo de tese -->
-        <name-map collection-handle="tede/61" submission-name="thesisProcess_linguagem"/>
-        <name-map collection-handle="123456789/11949" submission-name="thesisProcess_ppgcem"/>
-        <name-map collection-handle="123456789/12035" submission-name="thesisProcess_cet"/>
-        <name-map collection-handle="tede/68" submission-name="thesisProcess_quimica"/>
+        <!-- UFCAT: coleções de doutorado — fluxo único de tese -->
+        <name-map collection-handle="tede/61" submission-name="thesisProcess"/>
+        <name-map collection-handle="123456789/11949" submission-name="thesisProcess"/>
+        <name-map collection-handle="123456789/12035" submission-name="thesisProcess"/>
+        <name-map collection-handle="tede/68" submission-name="thesisProcess"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -190,145 +190,52 @@
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatdissertation_step1" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>dissertation.title</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatdissertation_step2" mandatory="true">
-            <heading>submit.progressbar.describe.steptwo</heading>
+            <heading>dissertation.people</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatdissertation_step3" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>dissertation.context</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatdissertation_step4" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>dissertation.committee</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatdissertation_step5" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>dissertation.description</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatthesis_step1" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>thesis.title</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatthesis_step2" mandatory="true">
-            <heading>submit.progressbar.describe.steptwo</heading>
+            <heading>thesis.people</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatthesis_step3" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>thesis.context</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatthesis_step4" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>thesis.committee</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
         <step-definition id="ufcatthesis_step5" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <!-- UFCAT: dissertações por programa (briefing 2026) -->
-        <step-definition id="ufcatdiss_educacao" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_engcivil" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_engprod" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_linguagem" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_geografia" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_gestao" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_historia" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_modelagem" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_quimica" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_fisica" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_matematica" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_saude" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_profbio" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatdiss_ppgcem" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-
-        <!-- UFCAT: teses por programa (briefing 2026) -->
-        <step-definition id="ufcatthesis_linguagem" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatthesis_quimica" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatthesis_cet" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ufcatthesis_ppgcem" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
+            <heading>thesis.description</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -586,189 +493,6 @@
 
         <!-- UFCAT: processo de submissao para teses -->
         <submission-process name="thesisProcess">
-            <step id="collection"/>
-            <step id="ufcatthesis_step1"/>
-            <step id="ufcatthesis_step2"/>
-            <step id="ufcatthesis_step3"/>
-            <step id="ufcatthesis_step4"/>
-            <step id="ufcatthesis_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-
-        <!-- UFCAT: processos por programa (briefing 2026) -->
-        <submission-process name="dissProcess_educacao">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_engcivil">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_engprod">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_linguagem">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_geografia">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_gestao">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_historia">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_modelagem">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_quimica">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_fisica">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_matematica">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_saude">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_profbio">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="dissProcess_ppgcem">
-            <step id="collection"/>
-            <step id="ufcatdissertation_step1"/>
-            <step id="ufcatdissertation_step2"/>
-            <step id="ufcatdissertation_step3"/>
-            <step id="ufcatdissertation_step4"/>
-            <step id="ufcatdissertation_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-
-        <submission-process name="thesisProcess_linguagem">
-            <step id="collection"/>
-            <step id="ufcatthesis_step1"/>
-            <step id="ufcatthesis_step2"/>
-            <step id="ufcatthesis_step3"/>
-            <step id="ufcatthesis_step4"/>
-            <step id="ufcatthesis_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="thesisProcess_quimica">
-            <step id="collection"/>
-            <step id="ufcatthesis_step1"/>
-            <step id="ufcatthesis_step2"/>
-            <step id="ufcatthesis_step3"/>
-            <step id="ufcatthesis_step4"/>
-            <step id="ufcatthesis_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="thesisProcess_cet">
-            <step id="collection"/>
-            <step id="ufcatthesis_step1"/>
-            <step id="ufcatthesis_step2"/>
-            <step id="ufcatthesis_step3"/>
-            <step id="ufcatthesis_step4"/>
-            <step id="ufcatthesis_step5"/>
-            <step id="upload"/>
-            <step id="license"/>
-        </submission-process>
-        <submission-process name="thesisProcess_ppgcem">
             <step id="collection"/>
             <step id="ufcatthesis_step1"/>
             <step id="ufcatthesis_step2"/>

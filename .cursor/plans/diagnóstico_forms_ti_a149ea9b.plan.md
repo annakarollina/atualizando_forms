@@ -3,7 +3,7 @@ name: Diagnóstico forms TI
 overview: Inclui correção de deploy (homolog) e estratégia dupla — manter name-maps completos e endurecer o processo default/traditional como rede de segurança para coleções sem mapeamento.
 todos:
   - id: verify-handles
-    content: "Confirmado no pacote local: tede/68 → thesisProcess_quimica; validar no servidor homolog que item-submission.xml deployado contém essa linha idêntica"
+    content: "Confirmado no pacote local: tede/68 → thesisProcess (fluxo único de tese); validar no servidor homolog que item-submission.xml deployado contém essa linha idêntica"
     status: pending
   - id: deploy-checklist
     content: "Validar com TI: submission-forms + item-submission + cnpq.xml deployados e serviço reiniciado"
@@ -48,7 +48,7 @@ O repositório contém configuração típica de **DSpace 7** (`DescribeStep`, `
 
 ## Evidências homologação (capturas)
 
-1. **Workspace item em edição (`…/workspaceitems/1292/edit`):** a coleção visível é **Mestrado em Modelagem e Otimização – PPGMO**, não “Doutorado em Química – PPGQ”. Ou seja, essa tela valida o fluxo da coleção **PPGMO** (handle esperado no pacote local: `tede/4010` → `dissProcess_modelagem`). Se mesmo assim aparecer formulário “tradicional” genérico ou etapa Descrever estranha, o problema é **mapa de submissão no servidor** ou item criado antes da atualização do mapa.
+1. **Workspace item em edição (`…/workspaceitems/1292/edit`):** a coleção visível é **Mestrado em Modelagem e Otimização – PPGMO**, não “Doutorado em Química – PPGQ”. Ou seja, essa tela valida o fluxo da coleção **PPGMO** (handle esperado no pacote local: `tede/40` → `dissertationProcess`). Se mesmo assim aparecer formulário “tradicional” genérico ou etapa Descrever estranha, o problema é **mapa de submissão no servidor** ou item criado antes da atualização do mapa.
 2. **TCC – “Trabalhos de Conclusão de Curso”:** o dropdown **“Selecione a permissão de acesso”** mostra só **três** valores úteis (Acesso aberto, embargado, restrito) — **não** aparece a quarta opção (metadata-only / COAR `c_14cb`). Também **não** aparece o texto longo *“Acesso fechado (closedAccess — ao público só metadados)”* que existe no seu `ufcat_access_rights` local.
   **Interpretação:** não é apenas “nome bonito”; no homolog o bloco `ufcat_access_rights` **é menor ou outro** que o do seu [submission-forms.xml](c:/annakarollina/atualizando_forms/submission-forms.xml). Isso é típico de **arquivo não substituído**, branch diferente no servidor, ou deploy/cache sem reinício.
 3. **Área CNPq no TCC:** campo **“Informe a área do CNPq”** aparece como caixa simples — compatível com `**cnpq.xml` ausente no servidor** ou UI sem carregar vocabulário (o XML local declara `<vocabulary>cnpq</vocabulary>` em [submission-forms.xml](c:/annakarollina/atualizando_forms/submission-forms.xml) ~3378–3381).
@@ -62,10 +62,10 @@ O repositório contém configuração típica de **DSpace 7** (`DescribeStep`, `
 - No pacote local, [item-submission.xml](c:/annakarollina/atualizando_forms/item-submission.xml) contém explicitamente:
 
 ```xml
-<name-map collection-handle="tede/68" submission-name="thesisProcess_quimica"/>
+<name-map collection-handle="tede/68" submission-name="thesisProcess"/>
 ```
 
-Ou seja: **na sua versão dos XMLs, você não “esqueceu” o PPGQ** — o fluxo esperado é `thesisProcess_quimica` com formulários `ufcatthesis_step1`–`ufcatthesis_step5`. Se no homolog o depósito em **tede/68** ainda cai no processo `traditional` ou em Describe vazio, a hipótese dominante é `**item-submission.xml` do servidor ≠ seu arquivo** (ou serviço não reiniciado após cópia).
+Ou seja: **na sua versão dos XMLs, você não “esqueceu” o PPGQ** — o fluxo esperado é `thesisProcess` com formulários `ufcatthesis_step1`–`ufcatthesis_step5`. Se no homolog o depósito em **tede/68** ainda cai no processo `traditional` ou em Describe vazio, a hipótese dominante é `**item-submission.xml` do servidor ≠ seu arquivo** (ou serviço não reiniciado após cópia).
 
 O mesmo raciocínio vale para **“outras coleções”** que você vê com formulário tradicional péssimo: todo handle que **não** está no `<submission-map>` cai no `default` → processo `traditional` em [item-submission.xml](c:/annakarollina/atualizando_forms/item-submission.xml) linha ~21.
 
@@ -77,13 +77,13 @@ O mesmo raciocínio vale para **“outras coleções”** que você vê com form
 
 **Causas mais prováveis (geralmente não é “sumiu do XML”):**
 
-- `**collection-handle` no mapa não bate com o ambiente.** Em [item-submission.xml](c:/annakarollina/atualizando_forms/item-submission.xml) há só **quatro** mapeamentos explícitos para doutorado (`thesisProcess_*`), misturando prefixos `tede/…` e `123456789/…`. Coleções novas ou handles diferentes em produção caem no `**default`** (`traditional`) — a interface pode parecer “errada” ou vazia conforme o passo/tema.
-- **Deploy parcial:** só `submission-forms.xml` ou só `item-submission.xml` atualizado, XML inválido no servidor, ou **serviço não reiniciado** após copiar configs (comportamento clássico: UI não reflete o esperado).
-- **Confusão com formulários órfãos:** Existem também `<form name="ufcatthesis_linguagem">` (e similares) que **não** são referenciados pelos `<submission-process>` atuais — os processos usam `ufcatthesis_step1`, não `ufcatthesis_linguagem`. Isso não quebra o doutorado, mas mostra que **o nome do passo precisa coincidir com o nome do `<form>`**; se alguém alterar o processo para um `step id` sem `<form>` correspondente, a tela fica em branco.
+- `**collection-handle` no mapa não bate com o ambiente.** Em [item-submission.xml](c:/annakarollina/atualizando_forms/item-submission.xml) as coleções de doutorado usam o processo único `thesisProcess` (handles `tede/61`, `tede/68`, `123456789/11949`, `123456789/12035`). Coleções novas ou handles diferentes em produção caem no `**default`** (`traditional`) — a interface pode parecer “errada” ou vazia conforme o passo/tema.
+- **Deploy parcial ou serviço sem reinício:** só `submission-forms.xml` ou só `item-submission.xml` atualizado, XML inválido no servidor, ou **serviço não reiniciado** após copiar configs (comportamento clássico: UI não reflete o esperado).
+- **Passo sem `<form>` correspondente:** o `step id` do processo precisa coincidir com o `<form name>` em `submission-forms.xml`; se alguém alterar o processo para um id sem formulário homónimo, a tela fica em branco.
 
-**Como separar culpa config vs. TI:** Para PPGQ já há handle `**tede/68`**. Pedir ao TI que no **servidor homolog** compare byte-a-byte (ou pelo menos grepem) se existe a linha `collection-handle="tede/68"` com `thesisProcess_quimica`. Se não existir, **culpa deploy**. Para outras coleções, mesmo procedimento: handle real vs. `<name-map>`.
+**Como separar culpa config vs. TI:** Para PPGQ já há handle `**tede/68`**. Pedir ao TI que no **servidor homolog** compare byte-a-byte (ou pelo menos grepem) se existe a linha `collection-handle="tede/68"` com `thesisProcess`. Se não existir, **culpa deploy**. Para outras coleções, mesmo procedimento: handle real vs. `<name-map>`.
 
-**Describe “vazio”:** Em DSpace 7, painel sem campos costuma indicar `**<step id>` sem `<form name>` correspondente** em `submission-forms.xml`, ou **processo errado** (traditional). Vale pedir ao TI o **nome do submission process** retornado pela API REST para o workspace item (ou log) — deve bater com `thesisProcess_quimica` para tede/68.
+**Describe “vazio”:** Em DSpace 7, painel sem campos costuma indicar `**<step id>` sem `<form name>` correspondente** em `submission-forms.xml`, ou **processo errado** (traditional). Vale pedir ao TI o **nome do submission process** retornado pela API REST para o workspace item (ou log) — deve bater com `thesisProcess` para tede/68.
 
 ---
 
