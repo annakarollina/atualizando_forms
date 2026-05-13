@@ -268,7 +268,7 @@
                     <style>col-md-12</style>
                     <input-type>twobox</input-type>
                     <vocabulary closed="true">cnpq</vocabulary>
-                    <hint>Selecione a área conforme o vocabulário cnpq.xml (tabela CNPq). Recomendado para depósitos institucionais.</hint>
+                    <hint>Selecione a área conforme o vocabulário (tabela CNPq). Recomendado para depósitos institucionais.</hint>
                     <required></required>
                 </field>
             </row>
